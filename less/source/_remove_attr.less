@@ -1,0 +1,67 @@
+.cols (@number) {
+width:@number;
+padding: 0 15px;
+box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.row{
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    &-inner {
+        height: 300px;
+    }
+}
+
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+
+.header{
+    justify-content: space-between;
+    display: flex;
+}
+
+.a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        color: #000;
+    }
+}
