@@ -1,0 +1,64 @@
+.cols(@number){
+    width: @number;
+    padding: 0 15px;
+    margin: 15px 0;
+    box-sizing: border-box;
+
+
+}
+.container{
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col{
+    // width: 25%;
+    // ve sau bo heigh di dc
+    //height: 300px;
+   // padding: 0 15px;
+   // box-sizing: border-box;
+   .cols(25%);
+    &-inner{
+        // ve sau set height cho anh -> col tu cao len
+        height: 300px;
+    }
+}
+
+.item-1{
+    background-color: red;
+}
+
+.item-2{
+    background-color:blue ;
+}
+
+.item-3{
+    background-color: green;
+}
+.item-4{
+    background-color:yellow ;
+}
+
+.item-5{
+    background-color: red;
+}
+
+.item-6{
+    background-color:blue ;
+}
+
+.item-7{
+    background-color: green;
+}
+.item-8{
+    background-color:yellow ;
+}
