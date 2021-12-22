@@ -1,0 +1,105 @@
+@media all and (max-width: 1024px) {
+  .grid-container {
+    width: 100%;
+  }
+  .grid-container .action {
+    height: 7%;
+  }
+  .grid-container .action a {
+    font-size: 0.5em;
+  }
+  .grid-container .info p:first-child {
+    font-size: 10px;
+  }
+  .grid-container .info p:last-child {
+    font-size: 10px;
+  }
+}
+.fira-sans {
+  font-family: 'Fira Sans', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+.grid-container {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  position: relative;
+  padding: 0 15px;
+}
+.grid-item {
+  position: relative;
+}
+.grid-item:hover::after {
+  content: url("../pngegg.png");
+  position: absolute;
+  top: 29%;
+  right: 0;
+  transform: rotate(180deg);
+}
+.grid-item:hover::before {
+  content: url("../pngegg.png");
+  position: absolute;
+  top: 30%;
+}
+.grid-item:hover .action {
+  transform: scale(100%);
+}
+.action {
+  position: absolute;
+  top: 216px;
+  transform: scale(0%);
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row;
+}
+.action div:first-child {
+  width: 58%;
+  height: 100%;
+  text-align: center;
+  background-color: #ddc96f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.action a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+.sicon {
+  width: 13.5%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.white {
+  color: white;
+  font-weight: lighter;
+}
+.info {
+  text-align: center;
+}
+.info p:first-child {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #333333;
+  font-weight: bold;
+  font-family: 'Fira Sans', sans-serif;
+}
+.info p:last-child {
+  color: #e0cba9;
+}
+/*# sourceMappingURL=style.css.map */
