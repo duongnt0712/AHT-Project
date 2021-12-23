@@ -1,7 +1,57 @@
 .header{
     width: 100%;
-    height: 700px;
-    background-image: url('../less/img/bg.png');
-    background-position: center;
+    height: 768px;
+    background-image: url('../less/img/bg-small.png');
+    background-position: center top;
+    padding-top: 25px
 }
 
+.banner-text{
+    .flex-row;
+    width: 100%;
+    padding: 0 72px 0 320px;
+    justify-content: space-between;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        a{
+            text-decoration: none;
+            color: white;
+            font-family: @comorant;
+        }
+    }
+    .banner-left{
+        width: 60%;
+        font-family: @comorant;
+        .title{
+            font-size: 72px;
+            font-style: italic;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 30px;
+        }
+    }
+    .banner-right{
+        text-align: right;
+    }
+}
+
+.nav{
+    .flex-row;
+    height: 70px;
+    justify-content: space-between;
+    padding: 0 71px;
+    position: relative;
+    .btn{
+        .flex-row;
+        justify-content: space-between;
+        width: 4%;
+        div:first-child{
+            ::after{
+                content: "2";
+                color: black;
+            }
+        }
+    }
+}

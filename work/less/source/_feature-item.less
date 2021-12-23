@@ -1,34 +1,48 @@
-@price-color: #e0cba9;
-.fira-sans{
-    font-family: 'Fira Sans', sans-serif;
-}
-
-.flex(@vertical,@horizontal){
-    display: flex;
-    justify-content: @horizontal;
-    align-items: @vertical;
-}
-
-body{
-    .flex(auto, center);
-    box-sizing: border-box;
-    padding: 0;
+.feature{
+    width: 1200px;
+    margin: auto;
+    &-head{
+        .flex-row;
+        justify-content: space-between;
+        height: 154px;
+        padding: 0 15px;
+        h3{
+            font-size: 56px;
+            line-height: 28px;
+            color: #333333;
+            font-weight: 700;
+            font-family: @comorant;
+        }
+        a{
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #333333;
+            font-weight: bold;
+            font-family: @fira-sans;
+        }
+        .btn-view{
+            .flex(center,auto);
+        }
+    }
 }
 
 .grid-container{
-    width: 1000px;
     display: flex;
     flex-flow: row wrap;
     position: relative;
     padding: 0 15px;
+    margin: 0 -15px;
+    align-items: center;
 }
 
 .grid-item{
     width: 25%;
-    padding: 0 15px 10px 15px;
+    height: 386px;
+    padding: 0 15px;
     .item-inner{
         position: relative;
-        
+        height: 321px;
         &:hover::after{
             content: url("../pngegg.png");
             position: absolute;
@@ -44,20 +58,23 @@ body{
         &:hover .action{
             transform: scale(100%);
         }
+        img{
+            height: 100%;
+        }
     }
 }
 
 .action{
     position: absolute;
-    bottom: 1%;
+    bottom: 0%;
     transform: scale(0%);
     width: 100%;
-    height: 12%;
+    height: 40px;
     .flex(center,space-between);
     flex-flow: row;
     div:first-child{
-        width: 58%;
-        height: 100%;
+        width: 145px;
+        height: 40px;
         text-align: center;
         background-color: rgb(221, 201, 111);
         .flex(center, center);
@@ -66,33 +83,29 @@ body{
         text-decoration: none;
         color: white;
         font-weight: bold;
-        font-size: 0.7em;
+        font-size: 12px;
+        font-family: @fira-sans;
     }
 }
 
 .sicon{
-    width: 13.5%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
     background-color: black;
     .flex(center, center);
 }
 
-.white{
-    color: white;
-    font-weight: lighter;
-}
-
 .info{
     text-align: center;
-    p{
-        line-height: 20px;
-    }
+    height: 74px;
+    .flex(center,center);
+    flex-direction: column;
     p:first-child{
         font-size: 14px;
         letter-spacing: 1px;
         color: #333333;
         font-weight: bold;
-        .fira-sans;
+        font-family: @fira-sans;
     }
     p:last-child{
         color: @price-color;
