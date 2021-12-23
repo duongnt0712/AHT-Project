@@ -29,36 +29,87 @@
    .cols(25%);
     &-inner{
         // ve sau set height cho anh -> col tu cao len
-        height: 300px;
+        
     }
 }
 
 .item-1{
-    background-color: red;
+    
 }
 
 .item-2{
-    background-color:blue ;
+    
 }
 
 .item-3{
-    background-color: green;
+
 }
 .item-4{
-    background-color:yellow ;
+    
 }
 
 .item-5{
-    background-color: red;
+    
 }
 
 .item-6{
-    background-color:blue ;
+    
 }
 
 .item-7{
-    background-color: green;
+    
 }
 .item-8{
-    background-color:yellow ;
+    
+}
+.image-wrapper{
+    line-height: 0;
+}
+.product-image{
+   width: 100%;
+   height: 300px;
+
+}
+
+
+.options{
+    width: 100%;
+    height: 37px;
+    
+    display: flex;
+    justify-content: space-between;
+    .add-to-cart{
+        background-color: #997e45;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        width: 60%;
+    }
+    .icon{
+        display: inline-block;
+        width: 30px;
+        
+    }
+
+   
+}
+.options{
+    visibility: hidden;
+}
+.col:hover .options{
+    visibility: visible;
+}
+
+
+
+.col-inner{
+    position: relative;;
+}
+
+.wrapper{
+    position: relative;
+    .options{
+        position: absolute;
+        bottom: 0;
+    }
 }
