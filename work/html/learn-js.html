@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../slick/slick.css">
+    <link rel="stylesheet" href="../slick/slick-theme.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../slick/slick.js"></script>
+    <title>Document</title>
+    <style>
+        .slider::after{
+            content: url("../pngegg.png");
+            position: absolute;
+            top: 45%;
+            right: 0;
+            transform: rotate(180deg);
+        }
+        .slider::before{
+            content: url("../pngegg.png");  
+            position: absolute;
+            top: 46%;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body style="background-color: yellowgreen;">
+    <button id="submit">Start</button>
+    <div class="slider" style="width: 200px; margin-left: 50px;">
+        <div style="width: 150px;height: 200px;background-color: blue;"></div>
+        <div style="width: 150px;height: 200px;background-color: green;"></div>
+        <div style="width: 150px;height: 200px;background-color: red;"></div>
+        <div style="width: 150px;height: 200px;background-color: yellow;"></div>
+    </div>
+    <script>
+        $(document).ready(()=>{
+            $('.slider').slick({
+                arrows:false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots:true,
+                prevArrow: $('.slider::before'),
+                nextArrow: $('.slider::after'),
+            });
+        })
+    </script>
+    <script src="../js/learn.js"></script>
+</body>
+</html>
