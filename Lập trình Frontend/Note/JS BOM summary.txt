@@ -1,0 +1,52 @@
+1. Window
+window.innerHeight //browser window height
+window.innerWidth //browser window width
+window.open()
+window.close()
+window.moveTo() - move current window
+window.resizeTo()
+
+2. Screen
+screen.width
+screen.height
+screen.availWidth // return visitors screen width
+screen.availHeight // return visitors screen height
+
+3. Location
+window.location.href
+window.location.hostname
+window.location.pathname
+window.location.protocol
+window.location.assign('url')
+
+4. History
+window.history.back() //click to back URL
+window.history.forward() //click to next URL
+
+5. Navigator
+navigator.cookiesEnabled
+navigator.appName // browser application name: Netscape
+navigator.appCodeName // browser name
+
+6. Popup Box
+alert()
+confirm()
+prompt()
+
+7. Timing event
+setTimeout()
+setInterval()
+
+8. Cookies
+* Reading cookie
+document.cookie
+escape() //storing VNese 
+
+* Change cookie
+document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+*Delete cookie
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+
+

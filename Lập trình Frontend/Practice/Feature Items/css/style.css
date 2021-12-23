@@ -1,0 +1,139 @@
+body,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: auto;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header > h1 {
+  font-size: 56px;
+  line-height: 28px;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Cormorant Garamond";
+}
+.header > a {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 24px;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Fira Sans";
+}
+.ion-icon {
+  font-size: 18px;
+  letter-spacing: 3px;
+  line-height: 24px;
+  color: #d6ba8d;
+  font-family: "Ionicons";
+}
+.row {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.col-inner,
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.image-container {
+  position: relative;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: all 3s;
+}
+.details > .details:first-child {
+  padding: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 23px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Fira Sans";
+  text-align: center;
+  background-color: #d6ba8d;
+  border: 1px solid white;
+}
+.details > .details:nth-child(2) {
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 53px;
+  font-family: "Ionicons";
+  text-align: center;
+  padding: 15px;
+  border: 1px solid white;
+}
+.image-container:hover > .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.text-container {
+  text-align: center;
+  margin: 15px 0;
+}
+.text-container > h2 {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 36px;
+  color: #333333;
+  font-weight: 400;
+  font-family: "Fira Sans";
+  text-align: center;
+}
+.text-container > p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 36px;
+  color: #d6ba8d;
+  font-weight: 700;
+  font-family: "Cormorant Garamond";
+  text-align: center;
+}
+@media all and (max-width: 1110px) {
+  .col {
+    width: 33%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+}
+@media all and (max-width: 576px) {
+  .col {
+    width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+// ---------------------------------FONT--------------------------------- //
+@main-font: 'Popins', san-serif;
+@font-title: 'Open sans';
+
+// ---------------------------------COLOR--------------------------------- //
+@main-bg-color: #0caBc9;
+
+// ---------------------------------LAYOUT--------------------------------- //
+@padding: 15px;
+
+
+
+// =================================MIXIN================================= //
+.transform (@translate) {
+    transform: @translate;
+    -webkit-transform: @translate;
+    -moz-transform: @translate;
+    -o-transform: @translate;
+    -ms-transform: @translate; 
+}
+
+.font(@font, @font-size, @font-weight) {
+    font-family: @font;
+    font-size: @font-size;
+    font-weight: @font-weight;    
+}
+
+.cols(@number) {
+    width: @number;
+    padding: 0 15px;
+    box-sizing: border-box;
+}

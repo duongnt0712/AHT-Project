@@ -1,0 +1,18 @@
+input::before {
+    content:'';
+    background-color: white;  
+}
+
+input:checked::before {
+    position: absolute;
+    zoom:3%;
+    content: 'helo';
+    content: url(tick.png);
+    /* border: 1px solid black; */
+    
+}
+
+li {
+    display: inline-block;
+}
+

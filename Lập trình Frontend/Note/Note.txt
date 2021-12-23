@@ -1,0 +1,13 @@
+1. Position: chỉ dùng để đưa 1 khối này nằm lên khối khác.
+[]: top, left, bottom, right, transform,...
+2. Flex:
+[]: flex-basis, flex-grow, flex-shrink, order,..
+3. Thuộc tính mới:
++ transform:
+	Scale(x): x=1.1; 1,2;... | overflow:  hidden cha thì sẽ phóng to con
+	Rotate(x): deg
+	Translate(x,y), Translate(x), Translate(y): px or %
+4. -webkit-transform
+   -moz-transform
+   -o-transform
+   -ms-transform

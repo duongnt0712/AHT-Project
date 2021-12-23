@@ -1,0 +1,47 @@
+1. Structure
+$(document).ready(function(){
+	//Các phương thức jQuery nằm trong này
+});
+
+$(function(){
+	//Các phương thức jQuery nằm trong này
+});
+
+2. Basic
+$(selector).action();
+Ex: $(".abc").hide();
+
+$(selector).action(function()) {
+	//TODO
+}
+Ex: 
+$("input[type='button']").click(function(){
+	$(".abc").hide();
+	alert("Đã ẩn phần tử có class là abc");
+});
+
+3. Callback function
+$("#hide-co").click(function(){
+	$("div").hide(3000, function(){
+		alert("Đã ẩn phần tử HTML");
+	});
+});
+
+4. jQuery effects - (speed, callback)
+* Hide/Show
+.hide()
+.show()
+.toggle() //hide and show
+
+* Fade
+.fadeIn()
+.fadeOut()
+.fadeToggle()
+.fadeTo(speed, opacity, callback) //fade to given opacity
+
+* Slide
+.slideDown()
+.slideUp()
+.slideToggle()
+
+
