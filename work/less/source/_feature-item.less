@@ -14,15 +14,22 @@
             font-family: @comorant;
         }
         a{
-            text-decoration: none;
             font-size: 14px;
             letter-spacing: 2px;
+            line-height: 24px;
             color: #333333;
-            font-weight: bold;
+            font-weight: 700;
             font-family: @fira-sans;
+            text-decoration: none;
+            text-transform: uppercase;
         }
         .btn-view{
-            .flex(center,auto);
+            .flex(center,space-between);
+            width: 145px;
+            height: 15px;
+            margin-top: 25px;
+            padding: 0 15px;
+
         }
     }
 }
@@ -40,20 +47,51 @@
     width: 25%;
     height: 386px;
     padding: 0 15px;
+    margin: 15px 0;
     .item-inner{
         position: relative;
         height: 321px;
-        &:hover::after{
-            content: url("../pngegg.png");
-            position: absolute;
-            top: 45%;
-            right: 0;
-            transform: rotate(180deg);
+        // &:hover::after{
+        //     content: url("../pngegg.png");
+        //     position: absolute;
+        //     top: 45%;
+        //     right: 0;
+        //     transform: rotate(180deg);
+        // }
+        // &:hover::before{
+        //     content: url("../pngegg.png");  
+        //     position: absolute;
+        //     top: 46%;
+        //     z-index: 1;
+        // }
+        &:hover{
+            .slider{
+                .slick-prev:before{
+                    content: url("../prev.png");
+                }
+                .slick-next:after{
+                    content: url("../next.png");
+                }
+            }
         }
-        &:hover::before{
-            content: url("../pngegg.png");  
-            position: absolute;
-            top: 46%;
+        .slider{
+            .slick-arrow{
+                
+            }
+            .slick-prev{
+                left: 10px;
+                z-index: 1;
+                &:before{
+                    content: "";
+                }
+            }
+            .slick-next{
+                right: 10px;
+                z-index: 1;
+                &:before{
+                    content: "";
+                }
+            }
         }
         &:hover .action{
             transform: scale(100%);
@@ -103,8 +141,10 @@
     p:first-child{
         font-size: 14px;
         letter-spacing: 1px;
+        line-height: 36px;
         color: #333333;
-        font-weight: bold;
+        font-weight: 400;
+        text-align: center;
         font-family: @fira-sans;
     }
     p:last-child{
