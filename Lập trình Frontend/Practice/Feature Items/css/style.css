@@ -8,7 +8,7 @@ a {
   text-decoration: none;
 }
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   width: 100%;
   padding: 0 15px;
   margin: auto;
@@ -18,13 +18,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 45px;
 }
 .header > h1 {
-  font-size: 56px;
+  font-size: 51px;
   line-height: 28px;
   color: #333333;
   font-weight: 700;
-  font-family: "Cormorant Garamond";
+  font-family: "Cormorant Garamond", serif;
 }
 .header > a {
   display: flex;
@@ -35,7 +36,7 @@ a {
   line-height: 24px;
   color: #333333;
   font-weight: 700;
-  font-family: "Fira Sans";
+  font-family: "Fira Sans", sans-serif;
 }
 .ion-icon {
   font-size: 18px;
@@ -64,33 +65,36 @@ a {
   position: relative;
 }
 .details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: none;
   width: 100%;
   position: absolute;
   bottom: 0;
   transition: all 3s;
+  height: 40px;
 }
-.details > .details:first-child {
-  padding: 15px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  line-height: 23px;
-  color: #ffffff;
-  font-weight: 700;
-  font-family: "Fira Sans";
-  text-align: center;
-  background-color: #d6ba8d;
-  border: 1px solid white;
-}
-.details > .details:nth-child(2) {
+.details > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 18px;
-  letter-spacing: 2px;
-  line-height: 53px;
+  text-transform: uppercase;
+  color: #cccccc;
   font-family: "Ionicons";
   text-align: center;
-  padding: 15px;
+  background-color: #333333;
+  width: 40px;
+  border: 1px solid white;
+}
+.details > a:first-child {
+  width: 50%;
+  padding: 0 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
+  background-color: #d6ba8d;
   border: 1px solid white;
 }
 .image-container:hover > .details {
@@ -100,25 +104,23 @@ a {
 }
 .text-container {
   text-align: center;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 .text-container > h2 {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
-  line-height: 36px;
   color: #333333;
   font-weight: 400;
-  font-family: "Fira Sans";
+  font-family: "Fira Sans", sans-serif;
   text-align: center;
 }
 .text-container > p {
   font-size: 18px;
   letter-spacing: 1px;
-  line-height: 36px;
   color: #d6ba8d;
   font-weight: 700;
-  font-family: "Cormorant Garamond";
+  font-family: "Cormorant Garamond", serif;
   text-align: center;
 }
 @media all and (max-width: 1110px) {
