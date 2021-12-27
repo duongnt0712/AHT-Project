@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  height: 1000px;
+  background-image: url('../img/bg.png');
+  background-position: center;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.white {
+  color: #fff;
+}
+.nav {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  height: 70px;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.nav img {
+  height: 50%;
+  width: 10%;
+}
+.nav .btn {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 4%;
+}
+.nav .btn:first-child::after {
+  content: "2";
+  color: black;
+}
+/*# sourceMappingURL=style2.css.map */
