@@ -1,0 +1,111 @@
+.header-bottom{
+    background-image: url("/images/banner.png");
+    background-repeat: no-repeat;
+    height: 990px;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.header-bottom-container{
+max-width: 1170px;
+width: 100%;
+padding: 0 15px;
+margin: auto;
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-item{
+    font-size: 26px;
+    margin-left: 20px;
+    padding-right: 7px;
+}
+
+.header-cart{
+    position: relative;
+    &::after{
+        content: attr(data);
+        font-size: 10px;
+        display: block;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        text-align: center;
+        border-radius: 15px;
+        background-color: white;
+        position: absolute;
+        top: -3px;
+        right: 0;
+    }
+}
+
+.background-content{
+position: absolute;
+max-width: 1170px;
+width: 100%;
+padding: 0 15px;
+padding-left: 300px;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+top: 50%;
+text-align: center;
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+
+}
+// 782 178
+.line-1{
+    font-size: 24px;
+    letter-spacing: 12px;
+    line-height: 32px;
+    color: #696969;
+    font-weight: 400;
+    font-family: "Fira Sans";
+
+}
+
+.line-2{
+width: 500px;
+height: 178px;
+font-size: 50px;
+letter-spacing: 15px;
+line-height: 70px;
+color: #333333;
+font-weight: 600;
+font-style: italic;
+font-family: "Cormorant Garamond";
+}
+.media{
+   
+}
+.background-contact{
+width: 500px;
+height: 178px;
+line-height: 30px;
+
+    display: flex;
+    flex-direction: column;
+  justify-content: flex-start;
+}
+
+.discover{
+    font-size: 16px;
+    background-color: black;
+letter-spacing: 2px;
+line-height: 24px;
+color: #ffffff;
+font-weight: 700;
+font-family: "Fira Sans";
+}
