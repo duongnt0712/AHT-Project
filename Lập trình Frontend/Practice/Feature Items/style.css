@@ -61,6 +61,8 @@
     border: 1px solid black;
     
 } */
+
+
 /* .details .pri-btn {
     padding: ;
 } */
@@ -94,6 +96,8 @@ body {
     padding: 0 15px;
     box-sizing: border-box;
 }
+
+
 /* .col-lg-4 {
     width: 25%;
     padding: 0 15px;
@@ -103,21 +107,19 @@ body {
 .col-inner {
     height: 300px;
 }
+
 .red {
     background-color: red;
 }
+
 .blue {
     background-color: blue;
 }
+
 .green {
     background-color: green;
 }
+
 .yellow {
     background-color: yellow;
 }
-
-
-
-
-
-

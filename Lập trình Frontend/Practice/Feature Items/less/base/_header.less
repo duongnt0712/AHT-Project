@@ -1,5 +1,6 @@
 .header {
     background-image: url(../images/header.png);
+    background-repeat: no-repeat;
     &-container {
         max-width: 1720px;
         width: 100%;
@@ -28,8 +29,11 @@
 
 .background {
     padding-top: 260px;
-    // display: flex;
-    // flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    .container {
+        margin-left: 260px;
+    }
     &-heading {
         p {
             font-size: 25px;
@@ -63,6 +67,23 @@
             color: @bg-main-color;
             font-weight: 700;
             font-family: "Fira Sans";
+        }
+    }
+
+    .social {
+        width: 260px;
+        ul {
+            width: 100%;
+            padding-top: 87px;
+            li {
+                font-size: 24px;
+                letter-spacing: 2px;
+                color: #ffffff;
+                font-weight: 500;
+                font-family: "Cormorant Garamond";
+                text-align: right;
+                padding-bottom: 10px;
+            }
         }
     }
 }

@@ -1,39 +1,73 @@
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    color: #000;
-    text-decoration: none;
-    &:hover {
-        color: #000;
-    }
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    li {
-        list-style: none;
-    }
-}
-
 // ===================================== GRID LAYOUT ===================================== //
-.container {
-    max-width: 1200px; //+ padding
-    width: 100%;
-    padding: 0 15px;
-    margin: auto;
-    box-sizing: border-box;
+// ===================================== INTRO ===================================== //
+.intro {
+    .intro-top {  
+        height: 80px;
+        border-bottom: 1px solid #696969;     
+        .row {
+            height: 80px;
+        }     
+        .col {
+            .cols(33%);
+            height: 100%;
+            border-left: 1px solid #696969;
+            border-right: 1px solid #696969;
+            &-inner {
+                height: 100%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h2 {
+                    font-size: 18px;
+                    letter-spacing: 2px;
+                    color: #333333;
+                    font-weight: 700;
+                    font-family: "Cormorant Garamond";
+                    text-transform: uppercase;
+                }
+                p {
+                    padding-top: 8px;
+                    font-size: 14px;
+                    color: #ababab;
+                    font-weight: 400;
+                    font-family: "Fira Sans";
+                    text-align: center;
+                }
+            }
+        }
+        
+    }
+    .intro-bottom {
+        height: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .col {
+            .cols(75%);
+        }
+        p {
+            font-size: 34px;
+            color: #333333;
+            line-height: 48px;
+            font-weight: 600;
+            font-family: "Cormorant Garamond";
+            text-align: center;
+        }
+    }
 }
 
-.container-fluid {
-    width: 100%;
-    padding: 0 15px;
-    box-sizing: border-box;
+// ===================================== FEATURE ITEMS ===================================== //
+.feature-items {
+    &-container {
+        max-width: 1720px;
+        width: 100%;
+        margin: auto;
+        box-sizing: border-box;
+    }
 }
 
+// ===================================== FEATURED PRODUCTS ===================================== //
 .title {
     display: flex;
     align-items: center;
@@ -69,12 +103,6 @@ ul {
     font-family: "Ionicons";
 }
 
-.row {
-    margin: 0 -15px;    
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .col {
     .cols(25%);
 }
@@ -92,6 +120,7 @@ ul {
 .arrow-btn {
     display: none;
 }
+
 .slider {
     
     .slick-arrow {
@@ -123,6 +152,7 @@ ul {
         }
     }
 }
+
 .details {
     display: none;
     width: 100%;
@@ -201,122 +231,61 @@ ul {
     }
 }
 
-//////////////////////////////////////FOOTER
-footer {
-    background-color: #333333;
-    height: 420px;
-    display: flex;
-    // justify-content: space-between;
-    align-items: center;
-    > .container > .row {
+// ===================================== BRAND ===================================== //
+.brand {
+    border-top: 1px solid black;
+    padding: 60px 0;
+    background-color: #ffffff;
+    .row {
         display: flex;
-        justify-content: space-between;
-        padding: 40px 0 70px 0;
-        > .col {
-            display: flex;
-            align-items: flex-end;
-            &:nth-child(2) {
-                width: auto;
-            }
-            &:nth-child(3) {
-                width: 16.6%;
-                justify-content: flex-end;
-            }
-            &:nth-child(4) {
-                width: 33.3%;
-            }
-            &:nth-child(5) {
-                justify-content: flex-end;
-            }
-
-            > .col-inner {
-                color: #ababab;
-
-                > ul {
-                    padding-left: 0;
-                    > li {
-                        display: inline-block;
-                        padding: 0 15px;
-                        text-transform: uppercase;
-                    }
-                } 
-            }
-        }
+        align-items: center;
+        justify-content: center
     }
-}
-footer > .container > .row:nth-child(2) {
-    padding: 20px 0;
-    border-top: 1px solid #242424;
-}
-
-.top-footer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    // padding: 30px 0;
-    margin-bottom: 74px;
-}
-
-.footer-menu {
-    color: #ababab;
-
-    > ul{
-        > li {
-            display: inline-block;
-            padding: 0 15px;
-            text-transform: uppercase;
+    .col {
+        .cols(16.6%);
+        img {
+            padding: 0 28px;
         }
-    } 
-    
-}
-
-.subscribe-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #d6ba8d;
-    border: 1px solid #d6ba8d;
-    padding: 13px 20px;
-    text-transform: uppercase;
-    > ion-icon {
-        margin-left: 12px;
+        
     }
 }
 
-.bottom-footer {
-    border-top: 1px solid #242424;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 47px;
+// ===================================== BLOG ===================================== //
+.blog {
+    background-color: #f9f9f9;
+    .col {
+        .cols(33.3%);
+    }
+    &-header {
+        font-size: 56px;
+        color: #333333;
+        font-weight: 700;
+        font-family: "Cormorant Garamond";
+        text-align: center;
+    }
+    &-text {
+        background-color: #ffffff;
+    }
+    &-share {
+        border-top: 1px solid #ededed;
+    }
+    &-btn {
+        display: flex;
+        justify-content: center;
+        p {
+            padding: 0 20px;
+            background-color: #ffffff;
+            font-size: 24px;
+            color: #333333;
+            font-weight: 400;
+            font-family: "Cormorant Garamond";
+            text-align: center;
+        }
+    }
 }
 
-.contact {
-    font-size: 14px;
-    line-height: 28px;
-    color: #696969;
-    font-weight: 400;
-    font-family: "Fira Sans";
-}
 
-.social {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: -8px;
-}
-.social ion-icon {
-    border: 1px solid #696969;
-    border-radius: 50%;
-    color: #ababab;    
-    padding: 15px;
-    margin-left: 8px;
-}
 
-.social ion-icon:hover {
-    background-color: #d6ba8d;
-    color: #333333;
-}
 
 
 
