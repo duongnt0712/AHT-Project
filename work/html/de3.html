@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../slick/slick.css">
     <link rel="stylesheet" href="../slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,600&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet/less" href="../less/style2.less">
@@ -19,17 +22,17 @@
 </head>
 <body>
     <div class="page-wrapper">
-        
+        <!-- Header -->
         <div class="header">
             <div class="nav">
-                <img src="../less/img/logo-bonfire.png" alt="logo">
+                <a href="#home"><img src="../less/img/logo-bonfire.png" alt="logo"></a>
                 <div class="btn">
                     <div class="btn-cart">
-                        <ion-icon name="cart-outline"></ion-icon>
+                        <a href="#cart"><ion-icon name="cart-outline"></ion-icon></a>
                         <div class="btn-cart-overlay">2</div>
                     </div>
                     <div class="btn-menu">
-                        <ion-icon name="menu-outline"></ion-icon>
+                        <a href="#menu"><ion-icon name="menu-outline"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -38,7 +41,7 @@
                     <p>Spring 2017</p>
                     <p class="title">It’s your
                         shine time</p>
-                    <button>Discover Now</button>
+                    <div><a href="#discover">Discover Now</a></div>
                 </div>
                 <div class="banner-right">
                     <ul class="social-link">
@@ -50,6 +53,8 @@
                 </div>
             </div>
         </div>
+        <!-- End Header -->
+        <!-- Strength -->
         <div class="strength">
             <div class="container">
                 <div class="row">
@@ -76,190 +81,233 @@
                 </div>
             </div>
         </div>
+        <!-- End Strength -->
+        <!-- Main Content -->
         <div class="main-content">
             <!-- Quote -->
             <div class="quote">
                 <p>It started with a simple idea: Create quality, well-designed products that I wanted myself.</p>
             </div>
             <!-- End Quote -->
+            <!-- News -->
+        <div class="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="col-inner">
+                            <img src="../less/img/feature1.png" alt="news">
+                        </div>
+                    </div>
+                    <div class="col  w50">
+                        <div class="col-inner">
+                            <img src="../less/img/feature2.png" alt="news">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col-inner">
+                            <img src="../less/img/feature3.png" alt="news">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col-inner">
+                            <img src="../less/img/feature4.png" alt="news">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col-inner">
+                            <img src="../less/img/feature5.png" alt="news">
+                        </div>
+                    </div>
+                    <div class="col  w50">
+                        <div class="col-inner">
+                            <img src="../less/img/feature6.png" alt="news">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End News -->
             <!-- Feature -->
             <div class="feature">
                 <div class="feature-head">
-                    <h3>Featured Items</h3>
+                    <h3>Featured items</h3>
                     <div class="btn-view">
-                        <a href="#">View More</a>
+                        <a href="#">View More
                         <ion-icon name="play-circle" class="price-color"></ion-icon>
+                        </a>
                     </div>
                 </div>
-                <div class="grid-container">
-                    <div class="grid-item">
-                        <div class="item-inner">
-                            <div class="slider">
-                                <img src="../less/img/1.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/2.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/3.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="slider">
+                                    <img src="../less/img/1.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/2.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/3.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                                </div>
+                                <div class="action">
+                                    <a href="#">ADD TO CART</a>
+                                    <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                                </div>
                             </div>
-                            <div class="action">
-                                <div><a href="#">ADD TO CART</a></div>
-                                <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                            <div class="info">
+                                <p><a href="#product">Cache Pendant Lamp</a></p>
+                                <p>$199.99</p>
                             </div>
                         </div>
-                        <div class="info">
-                            <p>Cache Pendant Lamp</p>
-                            <p>$199.99</p>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="slider">
+                                    <img src="../less/img/1.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/2.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/3.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                                </div>
+                                <div class="action">
+                                    <a href="#">ADD TO CART</a>
+                                    <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p><a href="#product">Cache Pendant Lamp</a></p>
+                                <p>$199.99</p>
+                            </div>
                         </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="slider">
+                                    <img src="../less/img/1.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/2.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/3.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                                </div>
+                                <div class="action">
+                                    <a href="#">ADD TO CART</a>
+                                    <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p><a href="#product">Cache Pendant Lamp</a></p>
+                                <p>$199.99</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="slider">
+                                    <img src="../less/img/1.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/2.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/3.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                                </div>
+                                <div class="action">
+                                    <a href="#">ADD TO CART</a>
+                                    <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p><a href="#product">Cache Pendant Lamp</a></p>
+                                <p>$199.99</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="slider">
+                                    <img src="../less/img/1.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/2.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/3.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                                </div>
+                                <div class="action">
+                                    <a href="#">ADD TO CART</a>
+                                    <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p><a href="#product">Cache Pendant Lamp</a></p>
+                                <p>$199.99</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="slider">
+                                    <img src="../less/img/1.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/2.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/3.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                                </div>
+                                <div class="action">
+                                    <a href="#">ADD TO CART</a>
+                                    <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p><a href="#product">Cache Pendant Lamp</a></p>
+                                <p>$199.99</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="slider">
+                                    <img src="../less/img/1.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/2.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/3.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                                </div>
+                                <div class="action">
+                                    <a href="#">ADD TO CART</a>
+                                    <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p><a href="#product">Cache Pendant Lamp</a></p>
+                                <p>$199.99</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="slider">
+                                    <img src="../less/img/1.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/2.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/3.png" alt="product" width="100%" height="250px">
+                                    <img src="../less/img/4.png" alt="product" width="100%" height="250px">
+                                </div>
+                                <div class="action">
+                                    <a href="#">ADD TO CART</a>
+                                    <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
+                                    <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p><a href="#product">Cache Pendant Lamp</a></p>
+                                <p>$199.99</p>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="grid-item">
-                        <div class="item-inner">
-                            <div class="slider">
-                                <img src="../less/img/1.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/2.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/3.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/4.png" alt="product" width="100%" height="250px">
-                            </div>
-                            <div class="action">
-                                <div><a href="#">ADD TO CART</a></div>
-                                <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>Cache Pendant Lamp</p>
-                            <p>$199.99</p>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="item-inner">
-                            <div class="slider">
-                                <img src="../less/img/1.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/2.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/3.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/4.png" alt="product" width="100%" height="250px">
-                            </div>
-                            <div class="action">
-                                <div><a href="#">ADD TO CART</a></div>
-                                <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>Cache Pendant Lamp</p>
-                            <p>$199.99</p>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="item-inner">
-                            <div class="slider">
-                                <img src="../less/img/1.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/2.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/3.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/4.png" alt="product" width="100%" height="250px">
-                            </div>
-                            <div class="action">
-                                <div><a href="#">ADD TO CART</a></div>
-                                <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>Cache Pendant Lamp</p>
-                            <p>$199.99</p>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="item-inner">
-                            <div class="slider">
-                                <img src="../less/img/1.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/2.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/3.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/4.png" alt="product" width="100%" height="250px">
-                            </div>
-                            <div class="action">
-                                <div><a href="#">ADD TO CART</a></div>
-                                <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>Cache Pendant Lamp</p>
-                            <p>$199.99</p>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="item-inner">
-                            <div class="slider">
-                                <img src="../less/img/1.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/2.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/3.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/4.png" alt="product" width="100%" height="250px">
-                            </div>
-                            <div class="action">
-                                <div><a href="#">ADD TO CART</a></div>
-                                <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>Cache Pendant Lamp</p>
-                            <p>$199.99</p>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="item-inner">
-                            <div class="slider">
-                                <img src="../less/img/1.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/2.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/3.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/4.png" alt="product" width="100%" height="250px">
-                            </div>
-                            <div class="action">
-                                <div><a href="#">ADD TO CART</a></div>
-                                <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>Cache Pendant Lamp</p>
-                            <p>$199.99</p>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="item-inner">
-                            <div class="slider">
-                                <img src="../less/img/1.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/2.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/3.png" alt="product" width="100%" height="250px">
-                                <img src="../less/img/4.png" alt="product" width="100%" height="250px">
-                            </div>
-                            <div class="action">
-                                <div><a href="#">ADD TO CART</a></div>
-                                <div class="sicon"><ion-icon name="heart-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="cellular-outline" class="white"></ion-icon></div>
-                                <div class="sicon"><ion-icon name="search-outline" class="white"></ion-icon></div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p>Cache Pendant Lamp</p>
-                            <p>$199.99</p>
-                        </div>
-                    </div>
-            
                 </div>
             </div>
             <!-- End Feature -->
             <!-- Blog -->
             <div class="blog">
                 <div class="container">
-                    <div class="blog-head">Blog Update</div>
+                    <div class="blog-head">Blog update</div>
                     <div class="row">
                         <div class="col">
                             <div class="col-inner">
@@ -268,14 +316,14 @@
                                 </div>
                                 <div class="blog-info">
                                     <div class="blog-date">JULY 14TH, 2016</div>
-                                    <div class="blog-title">8 Things I’ve Learned from 8 Years of Bonfire</div>
+                                    <div class="blog-title"><a href="#blog">8 Things I’ve Learned from 8 Years of Bonfire</a></div>
                                     <div class="blog-react">
                                         <div class="blog-react-view">
-                                            <ion-icon name="eye"></ion-icon>
+                                            <a href="#view"><ion-icon name="eye"></ion-icon></a>
                                             <p>940 Views</p>
                                         </div>
                                         <div class="blog-react-like">
-                                            <ion-icon name="share-social"></ion-icon>
+                                            <a href="#share"><ion-icon name="share-social"></ion-icon></a>
                                             <p>27 Likes</p>
                                         </div>
                                     </div>
@@ -289,14 +337,14 @@
                                 </div>
                                 <div class="blog-info">
                                     <div class="blog-date">JULY 14TH, 2016</div>
-                                    <div class="blog-title">How I Stay Inspired and Come Up with New Ideas</div>
+                                    <div class="blog-title"><a href="#blog">How I Stay Inspired and Come Up with New Ideas</a></div>
                                     <div class="blog-react">
                                         <div class="blog-react-view">
-                                            <ion-icon name="eye"></ion-icon>
+                                            <a href="#view"><ion-icon name="eye"></ion-icon></a>
                                             <p>940 Views</p>
                                         </div>
                                         <div class="blog-react-like">
-                                            <ion-icon name="share-social"></ion-icon>
+                                            <a href="#share"><ion-icon name="share-social"></ion-icon></a>
                                             <p>27 Likes</p>
                                         </div>
                                     </div>
@@ -310,14 +358,14 @@
                                 </div>
                                 <div class="blog-info">
                                     <div class="blog-date">JULY 14TH, 2016</div>
-                                    <div class="blog-title">Wait, there’s a human on the other end?</div>
+                                    <div class="blog-title"><a href="#blog">Wait, there’s a human on the other end?</a></div>
                                     <div class="blog-react">
                                         <div class="blog-react-view">
-                                            <ion-icon name="eye"></ion-icon>
+                                            <a href="#view"><ion-icon name="eye"></ion-icon></a>
                                             <p>940 Views</p>
                                         </div>
                                         <div class="blog-react-like">
-                                            <ion-icon name="share-social"></ion-icon>
+                                            <a href="#share"><ion-icon name="share-social"></ion-icon></a>
                                             <p>27 Likes</p>
                                         </div>
                                     </div>
@@ -326,7 +374,7 @@
                         </div>
                     </div>
                     <div class="blog-btn">
-                        <a href="#blog">Go to Blog</a>
+                        <a href="#blog">Go to blog</a>
                     </div>
                 </div>
             </div>
@@ -337,32 +385,32 @@
                     <div class="row">
                         <div class="col">
                             <div class="col-inner">
-                                <img src="../less/img/brand6.png" alt="brands">
+                                <a href=""><img src="../less/img/brand6.png" alt="brands"></a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="col-inner">
-                                <img src="../less/img/brand3.png" alt="brands">
+                                <a href=""><img src="../less/img/brand3.png" alt="brands"></a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="col-inner">
-                                <img src="../less/img/brand5.png" alt="brands">
+                                <a href=""><img src="../less/img/brand5.png" alt="brands"></a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="col-inner">
-                                <img src="../less/img/brand4.png" alt="brands">
+                                <a href=""><img src="../less/img/brand4.png" alt="brands"></a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="col-inner">
-                                <img src="../less/img/brand2.png" alt="brands">
+                                <a href=""><img src="../less/img/brand2.png" alt="brands"></a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="col-inner">
-                                <img src="../less/img/brand1.png" alt="brands">
+                                <a href=""><img src="../less/img/brand1.png" alt="brands"></a>
                             </div>
                         </div>
                     </div>
@@ -370,6 +418,8 @@
             </div>
             <!-- End Brands -->
         </div>
+        <!-- End Main Content -->
+        <!-- Footer -->
         <div class="footer">
             <div class="rows">
                 <div class="rows-1">
@@ -388,14 +438,14 @@
                     </div>
                     <div class="col-subcribe">
                         <div class="subcribe">
-                            <a href="#subcribe">Subscribe</a>
-                            <ion-icon name="mail"></ion-icon>
+                            <a href="#subcribe"><p>Subcribe</p>
+                                <ion-icon name="mail"></ion-icon></a>
                         </div>
                     </div>
                 </div>
                 <div class="rows-2">
                     <div class="left">
-                        <p>14 L.E Goulburn St, Sydney 2000NSW  -  (088) 1990 6886</p>
+                        <p>14 L.E Goulburn St, Sydney 2000NSW  -  <a href="tel:+088199068866">(088) 1990 6886</a></p>
                         <p>Copyright © 2016 Bonfire</p>
                     </div>
                     <div class="right">
@@ -409,6 +459,7 @@
                 </div>
             </div>
         </div>
+        <!-- End Footer -->
         <script>
         </script>
         <script src="../js/index.js"></script>
