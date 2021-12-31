@@ -144,21 +144,29 @@
         .rows{
             width: 100%;
             &-1{
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                .logo-footer{
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                }
                 .nav-footer{
-                    height: 50%;
+                    width: 100%;
+                    order: 3;
+                    height: 30%;
+                    justify-content: space-evenly;
+                    align-items: center;
                     ul{
                         flex-wrap: wrap;
                         li{
-                            width: 33.33%;
+                            width: 16.66%;
                         }
                     }
                 }
                 .col-subcribe{
-                    a{
-                        p{
-                            display: none;
-                        }
-                    }
+                    width: 25%;
+                    order: 2;
                 }
             }
         }
@@ -223,6 +231,19 @@
             .row{
                 .col{
                     .cols(50%);
+                    &-inner{
+                        height: 70%;
+                        .slider{
+                            height: 100%;
+                            img{
+                                width: 100%;
+                                height: 50%;
+                            }
+                        }
+                    }
+                    .info{
+                        height: 30%;
+                    }
                 };
             }
         }
@@ -231,21 +252,16 @@
 
 @media all and (max-width:520px) {
     .header{
-        height: 500px;
+        height: 65vh;
         .banner-text{
             top: calc(50% - 100px);
             .banner-left{
-                // p:first-child{
-                //     letter-spacing: 10px;
-                // }
-                // .title{
-                //     font-size: 50px;
-                //     line-height: 50px;
-                //     letter-spacing: 15px;
-                // }
-                // a{
-                //     padding: 10px 25px;
-                // }
+                p:first-child{
+                    letter-spacing: 1px;
+                }
+                .title{
+                    letter-spacing: 4px;
+                }
                 div{
                     margin-top: 40px
                 }
@@ -253,6 +269,13 @@
             .banner-right{
                 display: none;
             }
+        }
+        .nav{
+            position: fixed;
+            width: 100%;
+            background-color: blanchedalmond;
+            top: 0;
+            z-index: 2;
         }
     }
     .strength{
@@ -335,19 +358,23 @@
             height: 100%;
             &-1{
                 height: 50%;
-                .logo-footer{
+                justify-content: space-between;
+                .nav-footer{
                     display: none;
                 }
-                .nav-footer{
-                    width: 70%;
+                .logo-footer{
+                    width: 40%;
                 }
                 .col-subcribe{
-                    width: 20%;
+                    width: 40%;
                 }
             }
             &-2{
                 height: 50%;
             }
         }
+    }
+    .menu{
+        display: block;
     }
 }
