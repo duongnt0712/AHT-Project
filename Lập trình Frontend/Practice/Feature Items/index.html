@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BONFIRE | Homepage</title>
+    <title>Bonfire | Homepage</title>
     <!-- Link CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet/less" type="text/css" href="less/style.less" />
@@ -17,469 +17,523 @@
     <div class="wrapper">
         <!-- Header -->
         <div class="header">
-            <!-- Header Container -->
-            <div class="header-container">
+            <div class="container-fluid">
                 <!-- Menu -->
-                <div class="navbar" id="menu">
-                    <img src="images/logo.png" alt="">
-                    <div class="icon">
-                        <ion-icon name="cart-outline"></ion-icon>
-                        <ion-icon name="menu-outline"></ion-icon>
+                <div class="header__menu" id="menu">
+                    <div class="menu-left">
+                        <a href=""><img src="images/logo.png" alt=""></a>
+                    </div>
+                    <div class="header__menu-right">
+                        <div class="header__menu-right__icon">
+                            <a href="#"><ion-icon name="cart-outline"></ion-icon><span class="badge">2</span></a>
+                        </div>
+                        <div class="header__menu-right__icon">
+                            <a href="#" class="dropdown-menu"><ion-icon name="menu-outline"></ion-icon></a>
+                            <div class="dropdown-menu-content">
+                                <a href=""><p>Home</p></a>
+                                <a href=""><p>About</p></a>
+                                <a href=""><p>Services</p></a>
+                                <a href=""><p>Portfolio</p></a>
+                                <a href=""><p>Pages</p></a>
+                                <a href=""><p>Contact</p></a>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
                 <!-- End Menu -->
-                <!-- Background -->
-                <div class="background">
-                    <div class="container">
-                        <div class="background-heading">
+
+                <!-- Slider -->
+                <div class="header__slider">
+                    <div class="slider-title">
+                        <div class="slider-title__heading">
                             <p>Spring 2017</p>
-                            <h1>It's your shine time</h1>
+                            <h1>It’s your <br> shine time</h1>
                         </div>
-                        <div class="background-button">
+                        <div class="slider-title__button">
                             <a href="#">Discover now</a>
                         </div>
                     </div>
-                    <div class="social">
-                        <ul>
-                            <li><a href="">Facebook</a></li>
-                            <li><a href="">Twitter</a></li>
-                            <li><a href="">Instagram</a></li>
-                            <li><a href="">Youtube</a></li>
-                        </ul>
-                    </div>
+                    <ul class="slider-social">                        
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Youtube</a></li>                        
+                    </ul>
                 </div>
-                <!-- End Background -->
+                <!-- End Slider -->
             </div>
-            <!-- End Header Container -->
         </div>
         <!-- End Header -->
-        <!-- Intro -->
-        <div class="intro">
-            <div class="intro-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="col-inner">
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Intro -->
+            <div class="intro">
+                <div class="intro-top">
+                    <div class="container">
+                        <div class="intro-top-strengths">
+                            <div class="intro-top-strength">
                                 <h2>Free Shipping</h2>
                                 <p>All order over $300</p>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="col-inner">
-                                <h2>Support Customer</h2>
+                            <div class="intro-top-strength">
+                                <h2>&nbsp;Support Customer</h2>
                                 <p>Support 24/7</p>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="col-inner">
+                            <div class="intro-top-strength">
                                 <h2>Secure payments</h2>
                                 <p>Support 24/7</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="container intro-bottom">
+                    <p>It started with a simple idea: Create quality, well-designed products that I wanted myself.</p>
+                </div>
             </div>
-            <div class="container intro-bottom">
-                <div class="col">
-                    <div class="col-inner">
-                        <p>It started with a simple idea: Create quality, well-designed products that I wanted myself.</p>
+            <!-- End Intro -->
+
+            <!-- Feature Items -->
+            <div class="feature-items">
+                <div class="feature-items__container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/item 1.png" alt="">
+                                <div class="image-item-detail">
+                                    <h2 class="image-item-detail__title">Gold Leaf Ring</h2>
+                                    <p class="image-item-detail__price">$179.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/item 2.png" alt="">
+                                <div class="image-banner">
+                                    <img src="images/item 2 banner.png" alt="">
+                                    <div class="image-banner-details">
+                                        <p>sale up to</p>
+                                        <h1>70%</h1>
+                                        <h2>Select Gold Clearance</h2>
+                                        <a href="">Shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/item 3.png" alt="">
+                                <div class="image-item-detail">
+                                    <p class="image-item-detail__sub-title">New Collection</p>
+                                    <h2 class="image-item-detail__title-2">Leaf&nbsp; Ring</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/item 4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/item 5.png" alt="">
+                                <div class="image-item-detail">
+                                    <h2 class="image-item-detail__title">Rose Gold Necklaces</h2>
+                                    <p class="image-item-detail__price">$179.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/item 6.png" alt="">
+                                <div class="image-item-detail-2">
+                                    <h2 class="image-item-detail-2__title">Princess Ring Rose Gold</h2>
+                                    <p class="image-item-detail-2__sub-title">Rose gold plated over brass </p>  
+                                    <p class="image-item-detail-2__sub-title">* One size</p>                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- End Intro -->
-        <!-- Main Content -->
-        <div class="feature-items">
-            <div class="feature-items-container">
+            <!-- End Feature Items -->
 
+            <!-- Feature Products -->
+            <div class="feature-products">
+                <div class="container">
+                    <div class="feature-products-title">
+                        <h1>Featured items</h1>
+                        <a href="#">View more <ion-icon class="ion-icon" name="play-circle"></ion-icon></a>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="image-container">
+                                    <div class="slider">
+                                        <img src="images/pic1.png" alt="Kubusbowl Small">
+                                        <img src="images/pic2.png" alt="Kubusbowl Small">
+                                        <img src="images/pic3.png" alt="Kubusbowl Small">
+                                    </div>
+                                    <div class="details">
+                                        <a class="pri-btn" href="">Add to card</a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="cellular-sharp"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-container">
+                                    <h2>Kubusbowl Small</h2>
+                                    <p>$19.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="image-container">
+                                    <div class="slider">
+                                        <img src="images/pic2.png" alt="Kubusbowl Small">
+                                        <img src="images/pic1.png" alt="Kubusbowl Small">
+                                        <img src="images/pic3.png" alt="Kubusbowl Small">
+                                    </div>
+                                    <div class="details">
+                                        <a class="pri-btn" href="">Add to card</a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="cellular-sharp"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-container">
+                                    <h2>Divine Footstool</h2>
+                                    <p>$179.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="image-container">
+                                    <div class="slider">
+                                        <img src="images/pic3.png" alt="Kubusbowl Small">
+                                        <img src="images/pic1.png" alt="Kubusbowl Small">
+                                        <img src="images/pic2.png" alt="Kubusbowl Small">
+                                    </div>
+                                    <div class="details">
+                                        <a class="pri-btn" href="">Add to card</a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="cellular-sharp"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-container">
+                                    <h2>Cache Pendant Lamp</h2>
+                                    <p>$179.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="image-container">
+                                    <div class="slider">
+                                        <img src="images/pic4.png" alt="Kubusbowl Small">
+                                        <img src="images/pic1.png" alt="Kubusbowl Small">
+                                        <img src="images/pic2.png" alt="Kubusbowl Small">
+                                    </div>
+                                    <div class="details">
+                                        <a class="pri-btn" href="">Add to card</a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="cellular-sharp"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-container">
+                                    <h2>RIO Chair</h2>
+                                    <p>$179.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="image-container">
+                                    <div class="slider">
+                                        <img src="images/pic5.png" alt="Kubusbowl Small">
+                                        <img src="images/pic1.png" alt="Kubusbowl Small">
+                                        <img src="images/pic2.png" alt="Kubusbowl Small">
+                                    </div>
+                                    <div class="details">
+                                        <a class="pri-btn" href="">Add to card</a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="cellular-sharp"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-container">
+                                    <h2>Cache Pendant Lamp</h2>
+                                    <p>$179.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="image-container">
+                                    <div class="slider">
+                                        <img src="images/pic6.png" alt="Kubusbowl Small">
+                                        <img src="images/pic1.png" alt="Kubusbowl Small">
+                                        <img src="images/pic2.png" alt="Kubusbowl Small">
+                                    </div>
+                                    <div class="details">
+                                        <a class="pri-btn" href="">Add to card</a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="cellular-sharp"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-container">
+                                    <h2>Prismatic table</h2>
+                                    <p>$69.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="image-container">
+                                    <div class="slider">
+                                        <img src="images/pic7.png" alt="Kubusbowl Small">
+                                        <img src="images/pic1.png" alt="Kubusbowl Small">
+                                        <img src="images/pic2.png" alt="Kubusbowl Small">
+                                    </div>
+                                    <div class="details">
+                                        <a class="pri-btn" href="">Add to card</a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="cellular-sharp"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-container">
+                                    <h2>CobraT hermo Cup</h2>
+                                    <p>$179.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <div class="image-container">
+                                    <div class="slider">
+                                        <img src="images/pic8.png" alt="Kubusbowl Small">
+                                        <img src="images/pic1.png" alt="Kubusbowl Small">
+                                        <img src="images/pic2.png" alt="Kubusbowl Small">
+                                    </div>
+                                    <div class="details">
+                                        <a class="pri-btn" href="">Add to card</a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="cellular-sharp"></ion-icon>
+                                        </a>
+                                        <a class="sec-btn" href="">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-container">
+                                    <h2>Montana Collection</h2>
+                                    <p>$179.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- End Feature Products -->
+
+            <!-- Blog -->
+            <div class="blog">
+                <div class="blog-header">
+                    <h1>Blog update</h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/blog 1.png" alt="">
+                                <div class="blog-text">
+                                    <h3>July 14th, 2016</h3>
+                                    <h2>8 Things I’ve Learned from 8 Years of Bonfire</h2>
+                                    <div class="blog-share">
+                                        <p>
+                                            <ion-icon name="eye"></ion-icon> 941 Views</p>
+                                        <p>
+                                            <ion-icon name="share-social"></ion-icon> 27 Likes</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/blog 2.png" alt="">
+                                <div class="blog-text">
+                                    <h3>July 14th, 2016</h3>
+                                    <h2>How I Stay Inspired and Come Up with New Ideas</h2>
+                                    <div class="blog-share">
+                                        <p>
+                                            <ion-icon name="eye"></ion-icon> 941 Views</p>
+                                        <p>
+                                            <ion-icon name="share-social"></ion-icon> 27 Likes</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/blog 3.png" alt="">
+                                <div class="blog-text">
+                                    <h3>July 14th, 2016</h3>
+                                    <h2>Wait, there’s a human on the other end?</h2>
+                                    <div class="blog-share">
+                                        <p>
+                                            <ion-icon name="eye"></ion-icon> 941 Views</p>
+                                        <p>
+                                            <ion-icon name="share-social"></ion-icon> 27 Likes</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-btn">
+                    <a href="#"><span>Go to blog</span></a>
+                </div>
+            </div>
+            <!-- End Blog -->
+
+            <!-- Brand -->
+            <div class="brand">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/brand 1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/brand 2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/brand 3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/brand 4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/brand 5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-inner">
+                                <img src="images/brand 6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Brand -->
         </div>
         <!-- End Main Content -->
-        <!-- Feature Products -->
-        <div class="container feature-products">
-            <div class="title">
-                <h1>Featured items</h1>
-                <a href="#">View more <ion-icon class="ion-icon" name="play-circle"></ion-icon></a>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="col-inner">
-                        <div class="image-container">
-                            <div class="slider">
-                                <img src="images/pic1.png" alt="Kubusbowl Small">
-                                <img src="images/pic2.png" alt="Kubusbowl Small">
-                                <img src="images/pic3.png" alt="Kubusbowl Small">
-                            </div>
-                            <div class="details">
-                                <a class="pri-btn" href="">Add to card</a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="cellular-sharp"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h2>Kubusbowl Small</h2>
-                            <p>$19.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col-inner">
-                        <div class="image-container">
-                            <div class="slider">
-                                <img src="images/pic2.png" alt="Kubusbowl Small">
-                                <img src="images/pic1.png" alt="Kubusbowl Small">
-                                <img src="images/pic3.png" alt="Kubusbowl Small">
-                            </div>
-                            <div class="details">
-                                <a class="pri-btn" href="">Add to card</a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="cellular-sharp"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h2>Kubusbowl Small</h2>
-                            <p>$19.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col-inner">
-                        <div class="image-container">
-                            <div class="slider">
-                                <img src="images/pic3.png" alt="Kubusbowl Small">
-                                <img src="images/pic1.png" alt="Kubusbowl Small">
-                                <img src="images/pic2.png" alt="Kubusbowl Small">
-                            </div>
-                            <div class="details">
-                                <a class="pri-btn" href="">Add to card</a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="cellular-sharp"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h2>Kubusbowl Small</h2>
-                            <p>$19.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col-inner">
-                        <div class="image-container">
-                            <div class="slider">
-                                <img src="images/pic4.png" alt="Kubusbowl Small">
-                                <img src="images/pic1.png" alt="Kubusbowl Small">
-                                <img src="images/pic2.png" alt="Kubusbowl Small">
-                            </div>
-                            <div class="details">
-                                <a class="pri-btn" href="">Add to card</a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="cellular-sharp"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h2>Kubusbowl Small</h2>
-                            <p>$19.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col-inner">
-                        <div class="image-container">
-                            <div class="slider">
-                                <img src="images/pic5.png" alt="Kubusbowl Small">
-                                <img src="images/pic1.png" alt="Kubusbowl Small">
-                                <img src="images/pic2.png" alt="Kubusbowl Small">
-                            </div>
-                            <div class="details">
-                                <a class="pri-btn" href="">Add to card</a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="cellular-sharp"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h2>Kubusbowl Small</h2>
-                            <p>$19.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col-inner">
-                        <div class="image-container">
-                            <div class="slider">
-                                <img src="images/pic6.png" alt="Kubusbowl Small">
-                                <img src="images/pic1.png" alt="Kubusbowl Small">
-                                <img src="images/pic2.png" alt="Kubusbowl Small">
-                            </div>
-                            <div class="details">
-                                <a class="pri-btn" href="">Add to card</a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="cellular-sharp"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h2>Kubusbowl Small</h2>
-                            <p>$19.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col-inner">
-                        <div class="image-container">
-                            <div class="slider">
-                                <img src="images/pic7.png" alt="Kubusbowl Small">
-                                <img src="images/pic1.png" alt="Kubusbowl Small">
-                                <img src="images/pic2.png" alt="Kubusbowl Small">
-                            </div>
-                            <div class="details">
-                                <a class="pri-btn" href="">Add to card</a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="cellular-sharp"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h2>Kubusbowl Small</h2>
-                            <p>$19.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col-inner">
-                        <div class="image-container">
-                            <div class="slider">
-                                <img src="images/pic8.png" alt="Kubusbowl Small">
-                                <img src="images/pic1.png" alt="Kubusbowl Small">
-                                <img src="images/pic2.png" alt="Kubusbowl Small">
-                            </div>
-                            <div class="details">
-                                <a class="pri-btn" href="">Add to card</a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="cellular-sharp"></ion-icon>
-                                </a>
-                                <a class="sec-btn" href="">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-container">
-                            <h2>Kubusbowl Small</h2>
-                            <p>$19.00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Feature Products -->
-        <!-- Blog -->
-        <div class="blog">
-            <div class="blog-header">
-                <h1>Blog update</h1>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/blog 1.png" alt="">
-                            <div class="blog-text">
-                                <h3>July 14th, 2016</h3>
-                                <h2>8 Things I’ve Learned from 8 Years of Bonfire</h2>
-                                <div class="blog-share">
-                                    <p>
-                                        <ion-icon name="eye"></ion-icon> 941 Views</p>
-                                    <p>
-                                        <ion-icon name="eye"></ion-icon> 27 Likes</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/blog 2.png" alt="">
-                            <div class="blog-text">
-                                <h3>July 14th, 2016</h3>
-                                <h2>How I Stay Inspired and Come Up with New Ideas</h2>
-                                <div class="blog-share">
-                                    <p>
-                                        <ion-icon name="eye"></ion-icon> 941 Views</p>
-                                    <p>
-                                        <ion-icon name="eye"></ion-icon> 27 Likes</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/blog 3.png" alt="">
-                            <div class="blog-text">
-                                <h3>July 14th, 2016</h3>
-                                <h2>Wait, there’s a human on the other end?</h2>
-                                <div class="blog-share">
-                                    <p>
-                                        <ion-icon name="eye"></ion-icon> 941 Views</p>
-                                    <p>
-                                        <ion-icon name="eye"></ion-icon> 27 Likes</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-btn">
-                <p>Go to blog</p>
-            </div>
-        </div>
-        <!-- End Blog -->
-        <!-- Brand -->
-        <div class="brand">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/brand 1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/brand 2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/brand 3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/brand 4.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/brand 5.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/brand 6.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Brand -->
         <!-- Footer -->
-        <footer>
-            <div class="container footer">
-                <div class="row">
-                    <div class="col">
-                        <div class="col-inner">
-                            <img src="images/footer - logo.png" alt="logo-footer">
-                        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-row-top">     
+                    <div class="footer-logo">
+                        <img src="images/footer - logo.png" alt="logo-footer">
                     </div>
-                    <div class="col">
-                        <ul class="col-inner">
-                            <ul>
-                                <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">About</a>
-                                </li>
-                                <li>
-                                    <a href="#">Services</a>
-                                </li>
-                                <li>
-                                    <a href="#">Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="#">Pages</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <a href="" class="subscribe-btn"> Subscribe 
-                                <ion-icon name="mail"></ion-icon>
-                            </a>
-                        </div>
+                    <ul class="footer-menu">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Pages</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="footer-subscribe-btn">
+                        <a href="" class="footer-subscribe">
+                            <span>Subscribe</span>
+                            <ion-icon name="mail"></ion-icon>
+                        </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="col-inner">
-                            <div class="contact">
-                                <p> 14 L.E Goulburn St, Sydney 2000NSW - (088) 1990 6886 </p>
-                                <p> Copyright © 2016 Bonfire</p>
-                            </div>
-                        </div>
+                <div class="footer-row-bottom">
+                    <div class="footer-contact">
+                        <p> 14 L.E Goulburn St, Sydney 2000NSW&nbsp; - &nbsp;(088) 1990 6886 </p>
+                        <p> Copyright © 2016 Bonfire</p>
                     </div>
-                    <div class="col">
-                        <div class="col-inner">
-                            <div class="social">
-                                <ion-icon name="logo-facebook"></ion-icon>
-                                <ion-icon name="logo-twitter"></ion-icon>
-                                <ion-icon name="logo-youtube"></ion-icon>
-                                <ion-icon name="logo-skype"></ion-icon>
-                            </div>
-                        </div>
+                    <div class="footer-social">
+                        <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-skype"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -495,11 +549,16 @@
     <script src="slick/slick.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            $('.dropdown-menu').click(function() {
+                $('.dropdown-menu-content').toggle(200);
+            });
+
             $('.slider').slick({
                 prevArrow: '<button type="button" class="slick-prev"><ion-icon name="chevron-back-outline"></ion-icon></button>',
                 nextArrow: '<button type="button" class="slick-next"><ion-icon name="chevron-forward-outline"></ion-icon></button>'
             });
         });
+
     </script>
 </body>
 

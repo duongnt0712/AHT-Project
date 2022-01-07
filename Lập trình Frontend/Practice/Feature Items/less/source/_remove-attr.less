@@ -1,52 +1,51 @@
 // ===================================== GRID LAYOUT ===================================== //
 // ===================================== INTRO ===================================== //
 .intro {
-    .intro-top {  
-        height: 80px;
-        border-bottom: 1px solid #696969;     
-        .row {
-            height: 80px;
-        }     
-        .col {
-            .cols(33%);
-            height: 100%;
-            border-left: 1px solid #696969;
-            border-right: 1px solid #696969;
-            &-inner {
-                height: 100%;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                h2 {
-                    font-size: 18px;
-                    letter-spacing: 2px;
-                    color: #333333;
-                    font-weight: 700;
-                    font-family: "Cormorant Garamond";
-                    text-transform: uppercase;
-                }
-                p {
-                    padding-top: 8px;
-                    font-size: 14px;
-                    color: #ababab;
-                    font-weight: 400;
-                    font-family: "Fira Sans";
-                    text-align: center;
-                }
-            }
+    height: 410px;
+    &-top {  
+        border-bottom: 1px solid #efefef;     
+        &-strengths {
+            display: flex;
+            border-left: 1px solid #efefef;
         }
-        
+        &-strength {
+            height: 80px;
+            width: 400px;
+            height: 100%;
+            border-right: 1px solid #efefef;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // padding: 25px 0 ;
+            h2 {
+                padding-top: 21px;
+                font-size: 18px;
+                letter-spacing: 2px;
+                color: #333333;
+                font-weight: 700;
+                font-family: "Cormorant Garamond";
+                text-transform: uppercase;
+            }
+            p {
+                padding: 8px 0 12px 0;
+                font-size: 14px;
+                color: #ababab;
+                font-weight: 400;
+                font-family: "Fira Sans";
+                text-align: center;
+            }
+        }        
     }
-    .intro-bottom {
+    &-bottom {
         height: 320px;
         display: flex;
         justify-content: center;
         align-items: center;
-        .col {
-            .cols(75%);
-        }
+        text-align: center;        
         p {
+            width: 70%;
             font-size: 34px;
             color: #333333;
             line-height: 48px;
@@ -59,39 +58,184 @@
 
 // ===================================== FEATURE ITEMS ===================================== //
 .feature-items {
-    &-container {
-        max-width: 1720px;
+    &__container {
+        max-width: 1770px;
         width: 100%;
+        padding: 0 15px;
         margin: auto;
         box-sizing: border-box;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        margin: 0 -15px; 
+    }
+    .col {
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+        &:nth-child(2), &:nth-child(6) {
+            .cols(50%);
+            padding: 0 15px;
+        }
+        &-inner {
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .image-item-detail {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: 1;
+        &__title {
+            padding-bottom: 20px;
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            color: #333333;
+            font-weight: 400;
+            font-family: "Fira Sans";
+            text-align: center;
+        }
+        &__price {
+            padding-bottom: 34px;
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            color: #d6ba8d;
+            font-weight: 700;
+            font-family: "Cormorant Garamond";
+            text-align: center;
+        }
+        &__title-2 {
+            padding-left: 50px;
+            padding-bottom: 60px;
+            font-size: 72px;
+            color: #d6ba8d;
+            font-weight: 700;
+            font-family: "Cormorant Garamond";
+        }
+        &__sub-title {
+            padding-bottom: 16px;
+            padding-left: 50px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2.8px;
+            color: #333333;
+            font-weight: 400;
+            font-family: "Fira Sans";
+        }
+    }
+    .image-item-detail-2 {
+        position: absolute;
+        top: 0;
+        padding-top: 138px;
+        width: 260px;
+        padding-left: 54px;
+        &__title {
+            padding-bottom: 18px;
+            font-size: 48px;
+            color: #333333;
+            font-weight: 700;
+            font-family: "Cormorant Garamond";
+        }
+        &__sub-title {
+            padding-left: 3px;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            line-height: 1.714;
+            color: #696969;
+            font-weight: 400;
+            font-family: "Fira Sans";
+        }
+    }
+    .image-banner {
+        position: absolute;
+        right: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-details {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            top: 0;
+            p {
+                padding-top: 42px;
+                padding-left: 8px;
+                font-size: 18px;
+                letter-spacing: 3.5px;
+                color: #333333;
+                font-weight: 400;
+                font-family: "Fira Sans";
+                text-align: center;
+            }
+            h1 {
+                padding-top: 2px;
+                font-size: 100px;
+                color: #333333;
+                font-weight: 700;
+                font-family: "Cormorant Garamond";
+                text-align: center;
+            }
+            h2 {
+                padding-top: 14px;
+                font-size: 24px;
+                color: #696969;
+                font-weight: 700;
+                font-family: "Cormorant Garamond";
+                text-align: center;
+            }
+            a {
+                padding-left: 6px;
+                position: absolute;
+                bottom: 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+                letter-spacing: 0.2em;
+                color: #696969;
+                font-weight: 700;
+                font-family: "Fira Sans";
+                text-align: center;
+            }
+        }
     }
 }
 
 // ===================================== FEATURED PRODUCTS ===================================== //
-.title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 45px;
-
-    > h1 {
-        font-size: 51px;
-        line-height: 28px;
-        color: #333333;
-        font-weight: 700;
-        font-family: "Cormorant Garamond", serif;
-    }
-
-    > a {
+.feature-products{
+    &-title {
         display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        font-size: 14px;
-        letter-spacing: 2px;
-        line-height: 24px;
-        color: #333333;
-        font-weight: 700;
-        font-family: "Fira Sans", sans-serif;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 118px 0 62px 0;
+        > h1 {
+            font-size: 56px;
+            color: #333333;
+            font-weight: 700;
+            font-family: "Cormorant Garamond";
+        }  
+        > a {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #333333;
+            font-weight: 700;
+            font-family: "Fira Sans", sans-serif;
+            padding-bottom: 9px;
+            padding-right: 9px;
+            ion-icon {
+                margin-left: 9px;
+            }
+        }
     }
 }
 
@@ -115,6 +259,7 @@
 
 .image-container {
     position: relative;
+    width: 100%;
 }
 
 .arrow-btn {
@@ -122,11 +267,6 @@
 }
 
 .slider {
-    
-    .slick-arrow {
-
-    }
-
     .slick-prev {
         left: 10px;
         z-index: 1;
@@ -139,7 +279,6 @@
             color: #333333;
         }
     }
-
     .slick-next {
         right: 10px;
         font-size: 20px;
@@ -165,8 +304,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 18px;
-        // letter-spacing: 1px;
+        font-size: 14px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         color: #cccccc;
         font-family: "Ionicons";
@@ -185,7 +324,6 @@
         font-family: "Fira Sans", sans-serif;
         text-align: center;
         background-color: #d6ba8d;
-
         border: 1px solid white;
     }
 }
@@ -209,44 +347,26 @@
 
 .text-container {
     text-align: center;
-    margin: 10px 0;
-
     > h2 {
-        text-transform: uppercase;
         font-size: 14px;
-        letter-spacing: 1px;
+        letter-spacing: 0.05em;
         color: #333333;
-        font-weight: 400;
+        font-weight: 700;
         font-family: "Fira Sans", sans-serif;
         text-align: center;
+        padding-top: 18px;
     }
 
     > p {
-        font-size: 18px;
+        font-size: 7px;
         letter-spacing: 1px;
         color: #d6ba8d;
+        font-size: 18px;
         font-weight: 700;
         font-family: "Cormorant Garamond", serif;
         text-align: center;
-    }
-}
-
-// ===================================== BRAND ===================================== //
-.brand {
-    border-top: 1px solid black;
-    padding: 60px 0;
-    background-color: #ffffff;
-    .row {
-        display: flex;
-        align-items: center;
-        justify-content: center
-    }
-    .col {
-        .cols(16.6%);
-        img {
-            padding: 0 28px;
-        }
-        
+        padding-top: 5px;
+        padding-bottom: 30px;
     }
 }
 
@@ -257,22 +377,70 @@
         .cols(33.3%);
     }
     &-header {
-        font-size: 56px;
-        color: #333333;
-        font-weight: 700;
-        font-family: "Cormorant Garamond";
-        text-align: center;
+        height: 110px;
+        text-align: center;     
+        margin-top: 92px;
+        h1 {
+            transform: translateY(-75%);
+            font-size: 56px;
+            color: #333333;
+            line-height: 0.5;
+            font-weight: 700;
+            font-family: "Cormorant Garamond";
+        }
     }
     &-text {
         background-color: #ffffff;
+        padding: 0 34px;
+        h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #cccccc;
+            font-weight: 400;
+            font-family: "Fira Sans";
+            line-height: 1.714;
+            margin-top: 24px;
+            letter-spacing: 0.1em;
+        }
+        h2 {
+            height: 114px;
+            padding-top: 4px;
+            font-size: 24px;
+            color: #333333;
+            font-weight: 700;
+            font-family: "Cormorant Garamond";
+            line-height: 32px;
+            letter-spacing: 0.05em;
+        }
     }
     &-share {
         border-top: 1px solid #ededed;
+        display: flex;
+        p {
+            display: flex;
+            align-items: center;
+            margin-right: 21px;
+            padding: 19px 0 23px 0;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: 'FiraSans';
+            color: #696969;            
+            ion-icon {
+                font-size: 16px;
+                margin-right: 10.5px;
+                color: #92c5d9;
+            }
+        }
     }
     &-btn {
         display: flex;
         justify-content: center;
-        p {
+        align-items: center;
+        height: 196px;
+        a {
+            margin-top: -25px;
+            margin-left: -3px;
+            height: 16px;
             padding: 0 20px;
             background-color: #ffffff;
             font-size: 24px;
@@ -280,7 +448,37 @@
             font-weight: 400;
             font-family: "Cormorant Garamond";
             text-align: center;
+            span {
+                display: block;
+                margin-top: -13px;
+            }
         }
+    }
+}
+
+// ===================================== BRAND ===================================== //
+.brand {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    .container {
+        margin: auto;
+    }
+    background-color: #ffffff;
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 15px
+    }
+    .col {
+        .cols(16.6%);
+        img {
+            padding: 0 28px;
+        }        
     }
 }
 

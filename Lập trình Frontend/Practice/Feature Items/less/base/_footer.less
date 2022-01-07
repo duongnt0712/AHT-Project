@@ -1,133 +1,113 @@
-footer {
+.footer {
     background-color: #333333;
-    height: 420px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    > .container > .row {
+    &-row-top {
+        border-bottom: 1px solid #2b2b2b;
         display: flex;
-        justify-content: space-between;
-        padding: 65px 0 75px 0;         
-        > .col {
-            display: flex;
-            align-items: flex-end;
-            &:nth-child(2) {
-                width: 58%;
-                > .col-inner {
-                    color: #ababab;
-                    display: flex;
-                    align-items: center;
-                    > ul {
-                        > li {
-                            display: inline-block;
-                            a {
-                                padding: 0 15px;
-                                text-transform: uppercase;
-                                font-size: 14px;
-                                letter-spacing: 1px;
-                                color: #ababab;
-                                font-weight: 700;
-                                font-family: "Fira Sans";
-                                &:hover {
-                                    color: #d6ba8d;
-                                }
-                            }                            
-                        }
-                    } 
+        flex-direction: row;
+        // flex-wrap: wrap;
+        align-items: center;
+        height: 250px;
+        & > * {
+            margin-right: 30px;
+        }
+    }
+    &-logo {
+        margin: 7px 30px 15px 0;
+        flex: 1;
+    }
+    &-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        // justify-content: center;
+        margin-top: 75px;
+        flex: 2.25;
+        li {
+            margin-right: 33px;
+            a {
+                text-transform: uppercase;
+                font-size: 14px;
+                letter-spacing: 0.1em;
+                color: #ababab;
+                font-weight: bold;
+                font-family: "Fira Sans";
+                &:hover {
+                    color: #d6ba8d;
                 }
             }
-            &:nth-child(3) {
-                width: 17%;
-                justify-content: flex-end;
-            }
-            &:nth-child(4) {
-                width: 33.3%;
-            }
-            &:nth-child(5) {
-                justify-content: flex-end;
+            &:last-child {
+                margin-right: 0;
             }
         }
     }
-    > .container > .row:nth-child(2) {
+    &-subscribe-btn {
+        width: 158px;
+    }
+    &-subscribe {
+        margin-right: 0;
+        margin-top: 75px;
+        padding: 10px 20px;
+        border: 2px solid #696969;
+        color: #ababab;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-decoration: none;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Fira Sans";
+        font-weight: bold;
+        text-transform: uppercase;
+        ion-icon {
+            margin-left: 12px;
+            color: #d6ba8d;
+        }
+        &:hover {
+            color: #d6ba8d;
+            
+        }
+    }
+    &-row-bottom {
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        padding-top: 28px;
-        border-top: 1px solid #242424;
+        height: 170px;
+        & > * {
+            margin-right: 30px;
+        }
+    }
+    &-contact {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-top: 46px;
+        font-size: 14px;
+        color: #696969;
         font-weight: 400;
         font-family: "Fira Sans";
-        .col:first-child {
-            .cols(33%);
-            // padding: 20px 0;
+        p {
+            padding-bottom: 11px;
         }
-        .col:nth-child(2) {
-            .cols(25%);
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
+    }
+    &-social {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-right: 0;
+        ion-icon {
+            border: 1px solid #696969;
+            border-radius: 50%;
+            color: #ababab;    
+            padding: 15px;
+            margin-left: 9px;
+            &:hover {
+                background-color: #d6ba8d;
+                color: #333333;
+            }
         }
     }
 }
 
-.footer-menu {
-    color: #ababab;
-    > ul{
-        > li {
-            display: inline-block;
-            padding: 0 15px;
-            text-transform: uppercase;
-        }
-    } 
-    
-}
 
-.subscribe-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #ababab;
-    border: 1px solid #696969;
-    padding: 8px 23px;
-    text-transform: uppercase;
-    font-family: "Fira Sans";
-    > ion-icon {
-        margin-left: 12px;
-        color: #d6ba8d;
-    }
-}
-
-.bottom-footer {
-    border-top: 1px solid #242424;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 47px;
-}
-
-.contact {
-    font-size: 14px;
-    color: #696969;
-    font-weight: 400;
-    font-family: "Fira Sans";
-    p {
-        padding-top: 15px;
-    }
-}
-
-.social {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: -8 px;
-}
-.social ion-icon {
-    border: 1px solid #696969;
-    border-radius: 50%;
-    color: #ababab;    
-    padding: 15px;
-    margin-left: 9px;
-}
-
-.social ion-icon:hover {
-    background-color: #d6ba8d;
-    color: #333333;
-}

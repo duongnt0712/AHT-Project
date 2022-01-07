@@ -1,90 +1,124 @@
 .header {
-    background-image: url(../images/header.png);
-    background-repeat: no-repeat;
-    &-container {
-        max-width: 1720px;
-        width: 100%;
-        height: 1000px;
-        margin: auto;
-        box-sizing: border-box;
+    width: 100%;  
+    height: 1000px;
+    background: url(../images/header.png) no-repeat;
+    background-size: cover;
+    background-position: 75% 25%;
+    &__menu {
+        position: relative;
+        display: flex;        
+        justify-content: space-between;
+        padding-top: 28px;
+        &-right {
+            display: flex;
+            align-items: center;
+            &__icon {
+                position: relative;
+                font-size: 28px;
+                a {
+                    margin-left: 40px;
+                    margin-right: 10px;
+                    &:first-child {
+                        margin-right: 5px;
+                    }
+                }
+                ion-icon {
+                    color: #ffffff;
+                }
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    font-family: "Lato";
+                    background-color: #ffffff;
+                    border-radius: 50%;
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: -2px;
+                    right: -5px;
+                }
+            }
+        }
+    }
+    &__slider {
+        max-width: 1445px;
+        padding-top: 260px;
+        margin-left: auto;
         display: flex;
-        flex-direction: column;
-        justify-content: start;
+        justify-content: space-between;
     }
 }
 
-.navbar {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-top: 28px;
-    color: @bg-main-color;
-    font-size: 28px;
-    // .icon {
-    //     padding: 15px 7px;
-    // }
-}
-
-.background {
-    padding-top: 260px;
-    display: flex;
-    flex-direction: row;
-    .container {
-        margin-left: 260px;
-    }
-    &-heading {
+.slider {
+    &-title__heading {
         p {
-            font-size: 25px;
+            font-size: 24px;
             color: @font-sub-color;
-            // line-height: 32px;
-            letter-spacing: 12px;
+            line-height: 1;
+            letter-spacing: 12.7px;
             font-weight: 400;
             font-family: "Fira Sans";
         }
         h1 {
+            padding: 0;
             width: 850px;
-            padding-top: 35px;
+            padding-top: 36px;
             text-transform: uppercase;
             font-size: 100px;
             letter-spacing: 30px;
-            line-height: 100px;
+            line-height: 1;
             color: #333333;
             font-weight: 600;
             font-style: italic;
             font-family: "Cormorant Garamond";
         }
     }
-    &-button {
-        margin-top: 71px;
+    &-title__button {
+        padding-top: 71px;
         a {
-            padding: 13px 31px;
+            padding: 15px 29px;
             background-color: @font-main-color;
             text-transform: uppercase;
             font-size: 16px;
-            letter-spacing: 2px;
+            letter-spacing: 2.4px;
             color: @bg-main-color;
             font-weight: 700;
             font-family: "Fira Sans";
+            text-decoration: none;
         }
     }
-
-    .social {
-        width: 260px;
-        ul {
-            width: 100%;
-            padding-top: 87px;
-            li {
+    &-social {
+        margin-top: 78px;
+        li {
+            text-align: right;
+            padding: 5px 0;
+            a {
                 font-size: 24px;
-                letter-spacing: 2px;
+                letter-spacing: 2.4px;
                 color: #ffffff;
                 font-weight: 500;
                 font-family: "Cormorant Garamond";
-                text-align: right;
-                padding-bottom: 10px;
             }
         }
     }
+}
+
+.dropdown-menu {
+    transition: all 0.3s;
+    &-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        font-size: 20px;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        padding: 12px 16px;
+        z-index: 1;
+        p {
+            padding: 8px 0;
+        }
+    }    
 }
 

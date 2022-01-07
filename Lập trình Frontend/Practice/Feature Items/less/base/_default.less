@@ -1,3 +1,8 @@
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+
 body, h1, h2, p {
     margin: 0;
     padding: 0;
@@ -19,7 +24,7 @@ ul {
     }
 }
 
-// ===================================== GRID LAYOUT ===================================== //
+// ===================================== GONTAINER ===================================== //
 .container {
     max-width: 1200px; //+ padding
     width: 100%;
@@ -29,14 +34,16 @@ ul {
 }
 
 .container-fluid {
+    max-width: 1720px;
     width: 100%;
-    padding: 0 15px;
+    margin: auto;
     box-sizing: border-box;
 }
 
 .row {
     margin: 0 -15px;    
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
