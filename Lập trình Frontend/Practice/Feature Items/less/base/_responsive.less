@@ -1,14 +1,5 @@
-@media screen and (min-width: 1110px) {
-    // .col {
-    //     .cols(33%);
-    //     margin: auto;
-    // }
-}
-
-// big landscape tablets, laptops, and desktops
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
     .header {
-        // height: 965px;
         .slider-title__heading {
             h1 {
                 font-size: 80px;
@@ -190,19 +181,21 @@
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
     .header {
-        height: 1000px;
+        height: 800px;
+        &__slider {
+            padding-top: 130px;
+        }
         .slider-title__heading {
             h1 {
-                width: auto;
-                font-size: 60px;
+                font-size: 40px;
             }
             p {
-                font-size: 20px;
+                font-size: 16px;
             }
         }
         .slider-social {
             a {
-                font-size: 16px;
+                font-size: 10px;
             }
         }
     }
@@ -360,17 +353,17 @@
         }
         &-text {
             h3 {
-                font-size: 10px;
+                font-size: 12px;
             }
             h2 {
                 height: 114px;
                 padding-top: 2px;
-                font-size: 18px;
+                font-size: 22px;
             }
         }
         &-share {
             p {
-                font-size: 8px;
+                font-size: 12px;
                 ion-icon {
                     font-size: 10px;
                 }
@@ -394,6 +387,8 @@
                 margin-right: 0;
             }            
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             .footer-logo:nth-child(1) {
                 order: 1;
             }
@@ -405,7 +400,7 @@
             }
         }
         &-logo {
-            margin: 15px 0px 15px 0;
+            margin: 25px 0px 15px 0;
             justify-content: center;
             align-items: center;
             img {
@@ -428,10 +423,11 @@
             }
         }
         &-subscribe {
-            margin-top: 0;
-            margin-bottom: 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
         }
         &-row-bottom {
+            height: 130px;
             flex-direction: column;
             & > * {
                 margin-right: 0;
@@ -440,6 +436,7 @@
         &-contact {
             font-size: 10px;
             align-items: center;
+            padding-top: 23px;
         }
         &-social {
             justify-content: space-evenly;
@@ -452,7 +449,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .header {
         height: 1000px;
         .slider-title__heading {
