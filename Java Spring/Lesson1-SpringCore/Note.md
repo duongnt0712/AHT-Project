@@ -90,10 +90,12 @@ https://mvnrepository.com/artifact/mysql/mysql-connector-java
 - Execute DDL statement: `execute(SQL)`
 - DataSource class: `org.springframework.jdbc.datasource.DriverManagerDataSource`
 - Query Basic:
-```SELECT * FROM table;
+```
+SELECT * FROM table;
 INSERT INTO table (var1,var2) VALUES (?,?);
 UPDATE table SET var1=?, var2=? WHERE var3=?;
-DELETE FROM table WHERE var=?;```
+DELETE FROM table WHERE var=?;
+```
 
 ## 10. Transaction Management
 - An abstract layer on top of different underlying transaction management APIs.
@@ -115,5 +117,7 @@ DELETE FROM table WHERE var=?;```
 - Finally, DispatcherServlet pass model data to the view.
 
 - Required Config: map request in `web.xml`
-```<servlet></servlet>
-<servlet-mapping><servlet-mapping>```
+```
+<servlet></servlet>
+<servlet-mapping><servlet-mapping>
+```
