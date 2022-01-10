@@ -1,0 +1,199 @@
+// *{
+// 	margin:0;
+// 	padding:0;
+// }
+body {
+	margin: auto;
+	padding: 0;
+	max-width: 1920px;
+	width: 100%;
+}
+// .wrapper{
+// 	overflow: hidden;
+// }
+
+.container{
+	max-width: 1720px;
+	width: 100%;
+	margin: auto;
+	box-sizing: border-box;
+}
+.sm-container{
+	max-width: 1170px;
+	margin: auto;
+	padding: 0 15px;
+}
+
+.items {
+	.heading {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.h-left {
+			font-size: 56px;
+			line-height: 28px;
+			color: #333;
+			font-family: "Cormorant";
+			margin-top: 88px;
+		}
+
+		.h-right {
+			margin-top: 115px;
+
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+				padding-right: 15px;
+				font-size: 14px;
+				letter-spacing: 2px;
+				line-height: 24px;
+				color: #333;
+				font-family: "Fira Sans Bold";
+			}
+
+			ion-icon {
+				color: #d6ba8d;
+			}
+		}
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	display: inline;
+}
+
+
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	margin-top: 70px;
+
+	.col {
+		width: 25%;
+		padding: 0 15px;
+		box-sizing: border-box;
+
+		.image-product {
+			position: relative;
+
+			&:hover {
+				.hide {
+					display: flex;
+					justify-content: space-between;
+					visibility: visible;
+					opacity: 1;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.slider {
+	.slick-prev {
+		left: 10px;
+		font-size: 20px;
+		z-index: 1;
+		color: transparent;
+
+		&:before {
+			font-size: 0;
+		}
+
+		&:hover {
+			color: #333333;
+		}
+	}
+
+	.slick-next {
+		right: 10px;
+		font-size: 20px;
+		z-index: 1;
+		color: transparent;
+
+		&:before {
+			font-size: 0;
+		}
+
+		&:hover {
+			color: #333333;
+		}
+	}
+}
+
+.hide {
+	display: flex;
+	height: 40px;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+}
+
+span {
+	width: 40px;
+	background-color: #585858;
+	border: 1px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	// font-size: 18px;
+	letter-spacing: 2px;
+	line-height: 53px;
+
+	&:first-child {
+		width: 55%;
+		font-family: 'Fira Sans Bold';
+		background-color: #d6ba8d;
+		font-size: 14px;
+		letter-spacing: 1px;
+		line-height: 23px;
+		text-align: center;
+	}
+}
+
+.text {
+	.name {
+		text-align: center;
+		font-family: 'Fira Sans Regular';
+		font-size: 14px;
+		letter-spacing: 1px;
+		line-height: 36px;
+		color: #333;
+		margin:5px;
+	}
+
+	.price {
+		text-align: center;
+		font-family: 'Cormorant';
+		color: #d6ba8d;
+		margin-bottom: 25px;
+		margin-top: -5px;
+		
+	}
+}
+
+@media all and (max-width:1110px) {
+	.col {
+		width: 33%;
+	}
+
+	.banner-left {
+		margin-left: 100px;
+	}
+}
+
+@media all and (max-width:576px) {
+	.col {
+		width: 50%;
+	}
+}
