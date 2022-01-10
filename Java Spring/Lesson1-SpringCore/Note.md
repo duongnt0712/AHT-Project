@@ -38,10 +38,10 @@
 
 - Scope: `singleton` | `prototype` | `request` | `session` | `application` | `websocket`
 
-- How to:
-`@Component`
-`@Scope(value="scope_name")`
-	+ request, session, application, websocket: use for ApplicationContext impl ( XMLWebApplicationContext and AnnotationConfigWebApplicationContext)
+- How to: 
+<br/>`@Component`
+<br/>`@Scope(value="scope_name")`
+	+ request, session, application, websocket: use for ApplicationContext impl ( `XMLWebApplicationContext` and `AnnotationConfigWebApplicationContext`)
 	+ singleton: default scope, create only one instance each bean everytime a request has called.
 	+ prototype: can create new instance everytime has new request.
 
@@ -53,19 +53,21 @@
 - `@Component`, `@Repository`(persistence layer), `@Service` (business layer), `@Controller` (presentation layer): all is a BEAN
 - `@Configuration`: use for config files.
 - `@ComponentScan`: scan bean
-- `@Import`: for loading @Bean
+- `@Import`: for loading `@Bean`
 - LifeCycle Callback: `@Bean(initMethod="method_name", destroyMethod="method_name")`
 - `@Scope("scope_name")`: default is singleton, can change to prototype, session, ... 
 
 ## 6. Dependencies
 - Servlet Library: 
-```http://mvnrepository.com/artifact/javax.servlet/javax.servlet-api```
+`http://mvnrepository.com/artifact/javax.servlet/javax.servlet-api`
 - Spring dependencies: 
-```http://mvnrepository.com/artifact/org.springframework/spring-core
+```
+http://mvnrepository.com/artifact/org.springframework/spring-core
 http://mvnrepository.com/artifact/org.springframework/spring-web
 http://mvnrepository.com/artifact/org.springframework/spring-webmvc
 https://mvnrepository.com/artifact/org.springframework/spring-jdbc
-https://mvnrepository.com/artifact/mysql/mysql-connector-java```
+https://mvnrepository.com/artifact/mysql/mysql-connector-java
+```
 
 ## 7. Event Handling 
 - Provided through `ApplicatonListener<event_name>` interface, using `ConfigurableApplicationContext`
