@@ -1,0 +1,73 @@
+1. Output
+document.write(); // Display in main screen
+console.log(); // Display in console
+
+2. Functions
+alert()
+confirm()
+parseInt() // cắt số nguyên đầu của chuỗi
+parseFloat() // above but float 
+eval("1+2+3") -> 6 //biến chuỗi thành tính toán math bt
+prompt("...") //form nhập dữ liệu
+setTimeout(function(){}, 3000);
+search() //trả về vị trí đoạn text cần tìm
+typeof() //kiểm tra kiểu dữ liệu
+
+3. Loop
+for...in //return object key
+for...of //duyệt phần tử đối tượng
+
+4. String
+indexOf() //return object index
+slice() //cut string
+replace()
+trim() //cut space 
+split() //cut string into array character
+charAt() //get char 
+substring(f,l) //f-first index to l-last index
+substr(f,l) //f-first index and l-length
+
+5. Array
+every() //check if all values pass a test
+some() // check if some values pass a test
+find() //search and return 1 result
+filter() //search and return many results
+join() // join all array elements into a string with a separator (optional)
+pop() //delete last value in array and print
+shift() //delete first value in array and print
+push() // add value to the last of array and return array length
+unshit() //add value to the first index of array
+sort()
+reverse()
+map()
+reduce() //thực thi 1 hàm lên các phần tử của mảng để thu về 1 giá trị duy nhất
+
+6. Function
++ Expression function
+Ex: var test = function() {
+}
+
++ Arrow function
+Ex: hello = () => {
+}
+
++ Call back
+
+7. Object
+Initiate: var object = {}
+Create variable in object: object.var = [...]
+Delete variable in object by key: delete object.var;
+Call function inside object
+
+Constructor: same in java
+Prototype: Object.prototype.var = [...];
+
+8. Event
+onclick
+onchange
+onmouseover: di chuột đến
+onmouseout: di chuột đi
+onkeydown: count click times,add text into field
+onload: do event while loading page
+
+

@@ -1,0 +1,25 @@
+1. DOM Document 
+* Finding HTML Elements
+document.getElementById(id)
+document.getElementsByTagName(name)
+document.getElementsByClassName(name)
+
+* Changing HTML Elements
+element.innerHTML
+element.attribute
+element.style.property
+element.setAttribute(attribute, value)
+
+* Adding - Deleting Elements
+document.createElement(element)
+document.removeChild(element)
+document.appendChild(element)
+document.replaceChild(new, old)
+
+2. DOM Animation
+mainly use setInterval();
+
+3. DOM Event Listener
+addEventListener()
+removeEventListener()
+

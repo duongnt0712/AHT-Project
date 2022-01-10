@@ -1,0 +1,68 @@
+** Featured Items **
+//COLOR
+light-yellow: #d6ba8d
+black: #333333
+light-white: #cccccc
+
+//FONT
+item-font: "Fira Sans";
+price-font: "Cormorant Garamond"
+
+
+
+PRICE: 
+font-size: 18px;
+letter-spacing: 1px;
+line-height: 36px;
+color: #d6ba8d;
+font-weight: 700;
+font-family: "Cormorant Garamond";
+text-align: center;
+
+NAME:
+font-size: 14px;
+letter-spacing: 1px;
+line-height: 36px;
+color: #333333;
+font-weight: 400;
+font-family: "Fira Sans";
+text-align: center;
+
+TITLE: 
+font-size: 56px;
+line-height: 28px;
+color: #333333;
+font-weight: 700;
+font-family: "Cormorant Garamond";
+
+VIEW MORE:
+font-size: 14px;
+letter-spacing: 2px;
+line-height: 24px;
+color: #333333;
+font-weight: 700;
+font-family: "Fira Sans";
+
+VIEWMORE ICON: 
+font-size: 18px;
+letter-spacing: 3px;
+line-height: 24px;
+color: #d6ba8d;
+font-family: "Ionicons";
+
+BUTTON ICON:
+font-size: 18px;
+letter-spacing: 2px;
+line-height: 53px;
+color: #cccccc;
+font-family: "Ionicons";
+text-align: center;
+
+ADD TO CART:
+font-size: 14px;
+letter-spacing: 1px;
+line-height: 23px;
+color: #ffffff;
+font-weight: 700;
+font-family: "Fira Sans";
+text-align: center;
