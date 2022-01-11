@@ -1,63 +1,26 @@
-// *{
-// 	margin:0;
-// 	padding:0;
-// }
 body {
 	margin: auto;
 	padding: 0;
-	max-width: 1920px;
 	width: 100%;
 }
-// .wrapper{
-// 	overflow: hidden;
-// }
 
-.container{
-	max-width: 1720px;
+.container {
+	max-width: 1750px;
 	width: 100%;
-	margin: auto;
-	box-sizing: border-box;
-}
-.sm-container{
-	max-width: 1170px;
 	margin: auto;
 	padding: 0 15px;
+	box-sizing: border-box;
 }
 
-.items {
-	.heading {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		.h-left {
-			font-size: 56px;
-			line-height: 28px;
-			color: #333;
-			font-family: "Cormorant";
-			margin-top: 88px;
-		}
-
-		.h-right {
-			margin-top: 115px;
-
-			a {
-				text-decoration: none;
-				text-transform: uppercase;
-				padding-right: 15px;
-				font-size: 14px;
-				letter-spacing: 2px;
-				line-height: 24px;
-				color: #333;
-				font-family: "Fira Sans Bold";
-			}
-
-			ion-icon {
-				color: #d6ba8d;
-			}
-		}
-	}
+.sm-container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 15px;
+	box-sizing: border-box;
 }
+
+
+
 
 ul {
 	list-style-type: none;
@@ -73,7 +36,6 @@ li {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -15px;
-	margin-top: 70px;
 
 	.col {
 		width: 25%;
@@ -169,7 +131,7 @@ span {
 		letter-spacing: 1px;
 		line-height: 36px;
 		color: #333;
-		margin:5px;
+		margin: 5px;
 	}
 
 	.price {
@@ -178,13 +140,18 @@ span {
 		color: #d6ba8d;
 		margin-bottom: 25px;
 		margin-top: -5px;
-		
+
 	}
 }
 
-@media all and (max-width:1110px) {
-	.col {
-		width: 33%;
+@media all and (max-width:992px) {
+	
+	.banner-text .banner-left p.title{
+		font-size: 80px;
+	}
+	.information div.text-infor {
+		width:80%;
+		font-size: 24px;
 	}
 
 	.banner-left {
@@ -193,7 +160,11 @@ span {
 }
 
 @media all and (max-width:576px) {
-	.col {
-		width: 50%;
+	.banner-text .banner-left p.title{
+		font-size: 60px;
+	}
+	.information div.text-infor {
+		width:70%;
+		font-size: 20px;
 	}
 }

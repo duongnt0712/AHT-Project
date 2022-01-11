@@ -1,0 +1,166 @@
+// +blog
+.blog {
+    background-color: #f9f9f9;
+    margin-bottom: 4.7%;
+
+    .row {
+        .col {
+            width: 33.333%;
+
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+    }
+}
+
+.blog {
+    &-update {
+
+        h1 {
+            font-size: 56px;
+            color: #333;
+            font-family: "Cormorant";
+            text-align: center;
+            transform: translateY(-50%);
+            margin-bottom: 2.5%;
+        }
+
+
+    }
+
+    &-head {
+        position: absolute;
+        font-size: 56px;
+        font-family: 'Cormorant';
+        text-align: center;
+        right: calc(50% - 135px)
+    }
+
+    .col {
+
+        &-inner {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            height: 100%;
+
+        }
+    }
+
+    &-img {
+        margin-bottom: 5%;
+        img {
+            // object-fit: cover;
+            width:100%;
+        }
+    }
+
+    &-info {
+        padding: 0 35px;
+    }
+
+    &-date {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        text-align: start;
+        letter-spacing: 1px;
+        line-height: 24px;
+        color: #ccc;
+        font-family: 'Fira Sans Regular';
+        margin-bottom: 5%;
+    }
+
+    &-title {
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 32px;
+        font-family: 'Cormorant';
+        text-align: start;
+        color: #333;
+        margin-bottom: 16.5%;
+
+        a:hover {
+            color: chocolate;
+        }
+    }
+
+    .col:nth-child(3) {
+        .blog-title {
+            margin-right: 20px;
+        }
+    }
+
+    &-react {
+        display: flex;
+        border-top: 1px solid #ededed;
+        align-items: center;
+
+        &-view {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 15px;
+        }
+
+        &-like {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 25px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 32px;
+            color: #696969;
+            font-family: 'Fira Sans Bold';
+        }
+
+        ion-icon {
+            width: 16px;
+            height: 16px;
+            color: #92c5d9;
+            margin-right: 12px;
+        }
+    }
+
+    &-btn {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        padding-bottom: 10%;
+
+        a {
+            font-size: 24px;
+            line-height: 28px;
+            font-family: 'Cormorant';
+            font-weight: 400;
+            position: absolute;
+            text-decoration: none;
+            color: #333;
+            position: absolute;
+            top: 55.3%;
+            left: 45.5%;
+        }
+    }
+}
+
+// +brands
+.brands {
+    .col {
+        display: flex;
+        height: 190px;
+        align-items: center;
+        justify-content: center;
+        max-width: calc(100%/6);
+        img{
+            width: 100%;
+        }
+    }
+}
