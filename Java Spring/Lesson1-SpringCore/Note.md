@@ -1,7 +1,7 @@
 # SPRING CORE
 
 ## 1. IOC (Inversion of Control)
-- Creating and manage object for us, helping our application be configurable and manageing dependancies.
+- Creating and manage object for us, helping our application be configurable and managing dependencies.
 - Combine with `Dependency Injection`
 
 - **IOC Container**: manage beans - create object, write them together, config and manage their life cycle till destruction.
@@ -85,10 +85,11 @@ Ex: 	`byName` - match the **ref bean id** with the **constant name** of this cla
 - No need to write setter and constructor when using `@Autowired` (and `@Qualifier`) before dependency.
 
 ## 5. Annotations
-Using `AnnotationConfigApplicationContex` t
-- `@Component`, `@Repository`(persistence layer), `@Service` (business layer), `@Controller` (presentation layer): all is a BEAN
+- `@Component("bean_id")`, `@Repository`(persistence layer), `@Service` (business layer), `@Controller` (presentation layer): all is a BEAN
+<context:component-scan base-package="package_path">
 - `@Configuration`: use for config files.
-- `@ComponentScan`: scan bean
+- `@ComponentScan`: scan bean if using `@Component`
+- `@PropertySource(classpath:file_name.properties")`: when using properties file
 - `@Import`: for loading `@Bean`
 - LifeCycle Callback: `@Bean(initMethod="method_name", destroyMethod="method_name")`
 - `@Scope("scope_name")`: default is singleton, can change to prototype, session, ... 
@@ -169,28 +170,39 @@ DELETE FROM table WHERE var=?;
 ```
 
 ## 12. Customize a bean
-- Initialization method
+- Initialization method after DI is done
 `@PostConstruct`
-- Destroy method
+- Destroy method to signal that the instance is in the process of being remove by the container, using `close()`(close permanently) or `registerShutdownHook()` (close temporary)
 `@PreDestroy`
-
+- Instead of using `<context:annotation-config/>`, using `<bean class="...context.annotation.CommonAnnotationBeanProcessor"></bean>`
 
 ## 13. Bean LifeCycle
-- controlled using `init()` method or using `InitializingBean`/`DisposableBean` interfaces
+- 3 ways to config life cycle methods in spring
+	+ `Annotation Approach`
+	+ `XML Approach`
+	+ `Configuring bean life cycle` <br/>
+	
+(1) Custom bean as above part or <br/>
+(2) controlled using `init()` method or <br/>
+(3) using `InitializingBean`/`DisposableBean` interfaces (NOT RECOMMENDED)
 ```
 org.springframework.beans.factory.InitializingBean
 org.springframework.beans.factory.DisposableBean
 ```
 
+Interface:	`ApplicationContext`
+AbstractClass:	`AbstractApplicationContext`
+Class:		`ClassPathXmlApplicationContext`
+
 ## 14. Inject from properties file 
-- In Bean configuration, add `<context:property-placeholder location="classpath:file_name.properties"/>` to define the properties file.
-- Call inside <bean>: `<property name="" value="${properties_var}" />`
-or 
-Use `@Value("value_here")` before setter methods (Add `@Required` above for mandatory constant)
-Ex: 	`@Value("Daibeodeptrai")`
+- In Bean configuration, add `<context:property-placeholder location=" classpath:file_name.properties"/>` to define the properties file.
+- Call inside <bean>: `<property name="" value="${properties_var}" />` <br />
+or <br /> 
+Use `@Value("value_here")` before setter methods (Add `@Required` above for mandatory constant) <br />
+Ex: 	`@Value("Daibeodeptrai")` <br />
 	`@Value("${cat.name}")` (which in properties file)
 
-**RERFERENCE**:
+# RERFERENCE:
 ```
 https://www.tutorialspoint.com/spring/index.htm
 https://groupe-sii.github.io/cheat-sheets/spring/spring-core/index.html
