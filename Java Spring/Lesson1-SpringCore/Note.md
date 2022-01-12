@@ -7,9 +7,9 @@
 - **IOC Container**: manage beans - create object, write them together, config and manage their life cycle till destruction.
 		configuration metadata: XML, Java annotations, Java code.
 	+ BeanFactory (use for lightweight application): provide config framework and basic function
-	Ex: `XmlBeanFactory`
+	<br/>Ex: `XmlBeanFactory`
 	+ ApplicationContext (recommend): extends from BeanFactory with more enterprise-specific functionality: resolve textual messages from a properties file, publish application events to interested event listeners.
-	Common implementation: 
+	<br/>Common implementation: 
 		`ClassPathXmlApplicationContext`
 		`FileSystemXmlApplicationContext`		
 		`WebXmlApplicationContext`
@@ -18,7 +18,7 @@
 		- using `ClassPathXmlApplicationContext()`: load beans configuration file and take care of creating and initializing all objects (beans mentioned in config file)
 		- using `AnnotationConfigApplicationContext()`: load to read config file
 	+ use `getBean()` - use bean ID to return generic object, then cast to actual object.
-	How to use: 	`(class_name) context.getBean("bean_name");`
+	<br/>How to use: 	`(class_name) context.getBean("bean_name");`
 			`context.getBean("bean_name", class_name.class)`
 - **Bean Configuration File**: `Beans.xml`
 ```
@@ -32,7 +32,7 @@
 
 </beans>
 ```
-- Benefits: 
+- **Benefits**: 
 	+ minimize the amount of code
 	+ make application easy to test (doesn't require any singletons in unit test cases.)
 	+ IOC container support eager instantiation and lazy loading of services.
@@ -41,13 +41,13 @@
 - Not create objects but describe how they should be created
 - Not directly connect to components and services but describe which services are needed by which components in config file. 
 IOC container is then responsible for hooking it all up.
-- 2 types:
+- **2 types**:
 	+ `Constructor-based DI`: container invokes a class constructor with arguments, each representing a dependency on other class, dont need setter.
-	`<contructor-arg name="" value="" type=""/>`
+	<br/>`<contructor-arg name="" value="" type=""/>`
 	+ `Setter-based DI`: container call setter methods after invoking no-argument constructor or no-argument static factory method to instantiate bean.
-	`<property name="" value=""/>`
-	`<property name="" ref=""/>`
-- 3 forms:
+	<br/>`<property name="" value=""/>`
+	<br/>`<property name="" ref=""/>`
+- **3 forms**:
 	+ Injection literals
 	+ Injection object
 	+ Injection collection
@@ -60,8 +60,8 @@ IOC container is then responsible for hooking it all up.
 </bean>
 ```
 
-- Using Annotation: initialize a bean
-@Bean: use only inside `@Configuration`
+- Using **Annotation**: initialize a bean
+<br/>@Bean: use only inside `@Configuration`
 
 - Scope: `singleton` | `prototype` | `request` | `session` | `application` | `websocket`
 
@@ -74,9 +74,9 @@ IOC container is then responsible for hooking it all up.
 
 ## 4. Autowiring
 - `@Autowired`: auto match value in container and inject without setting property value for bean.
-4 autowired mode: no, byType, byName, constructor
-or use: `<bean id="" class="" autowire="autowired_mode">`
-Ex: 	`byName` - match the **ref bean id** with the **constant name** of this class.
+<br/>4 autowired mode: no, byType, byName, constructor
+<br/>or use: `<bean id="" class="" autowire="autowired_mode">`
+<br/>Ex: 	`byName` - match the **ref bean id** with the **constant name** of this class.
 	`byType` - match the **ref bean class** with **class name** 
 	`constructor` - match the **ref bean** with the **constructor** of this class.
 - Use via class filed, via a setter, via constructor(easy test)
@@ -86,13 +86,13 @@ Ex: 	`byName` - match the **ref bean id** with the **constant name** of this cla
 
 ## 5. Annotations
 - `@Component("bean_id")`, `@Repository`(persistence layer), `@Service` (business layer), `@Controller` (presentation layer): all is a BEAN
-<context:component-scan base-package="package_path">
+<br/>`<context:component-scan base-package="package_path">`
 - `@Configuration`: use for config files.
 - `@ComponentScan`: scan bean if using `@Component`
 - `@PropertySource(classpath:file_name.properties")`: when using properties file
 - `@Import`: for loading `@Bean`
 - LifeCycle Callback: `@Bean(initMethod="method_name", destroyMethod="method_name")`
-- `@Scope("scope_name")`: default is singleton, can change to prototype, session, ... 
+- `@Scope("scope_name")`: default is `singleton`, can change to `prototype`, `session`, ... 
 
 ## 6. Dependencies
 ```
@@ -135,7 +135,7 @@ https://mvnrepository.com/artifact/mysql/mysql-connector-java
 	+ `queryForLong()`
 	+ `queryForObject()`
 - Execute DDL statement: `execute(SQL)`
-- DataSource class: `org.springframework.jdbc.datasource.DriverManagerDataSource`
+- **DataSource** class: `org.springframework.jdbc.datasource.DriverManagerDataSource`
 - Query Basic:
 ```
 SELECT * FROM table;
@@ -171,9 +171,9 @@ DELETE FROM table WHERE var=?;
 
 ## 12. Customize a bean
 - Initialization method after DI is done
-`@PostConstruct`
+<br/>`@PostConstruct`
 - Destroy method to signal that the instance is in the process of being remove by the container, using `close()`(close permanently) or `registerShutdownHook()` (close temporary)
-`@PreDestroy`
+<br/>`@PreDestroy`
 - Instead of using `<context:annotation-config/>`, using `<bean class="...context.annotation.CommonAnnotationBeanProcessor"></bean>`
 
 ## 13. Bean LifeCycle
@@ -184,15 +184,15 @@ DELETE FROM table WHERE var=?;
 	
 (1) Custom bean as above part or <br/>
 (2) controlled using `init()` method or <br/>
-(3) using `InitializingBean`/`DisposableBean` interfaces (NOT RECOMMENDED)
+(3) using `InitializingBean`/`DisposableBean` interfaces **(NOT RECOMMENDED)**
 ```
 org.springframework.beans.factory.InitializingBean
 org.springframework.beans.factory.DisposableBean
 ```
 
 Interface:	`ApplicationContext`
-AbstractClass:	`AbstractApplicationContext`
-Class:		`ClassPathXmlApplicationContext`
+<br/>AbstractClass:	`AbstractApplicationContext`
+<br/>Class:		`ClassPathXmlApplicationContext`
 
 ## 14. Inject from properties file 
 - In Bean configuration, add `<context:property-placeholder location=" classpath:file_name.properties"/>` to define the properties file.
