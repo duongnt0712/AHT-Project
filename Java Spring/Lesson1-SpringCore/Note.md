@@ -1,6 +1,7 @@
 # SPRING CORE
 
 ## 1. IOC (Inversion of Control)
+- Creating and manage object for us, helping our application be configurable and manageing dependancies.
 - Combine with `Dependency Injection`
 
 - **IOC Container**: manage beans - create object, write them together, config and manage their life cycle till destruction.
@@ -9,20 +10,26 @@
 	Ex: `XmlBeanFactory`
 	+ ApplicationContext (recommend): extends from BeanFactory with more enterprise-specific functionality: resolve textual messages from a properties file, publish application events to interested event listeners.
 	Common implementation: 
-		`FileSystemXmlApplicationContext`
 		`ClassPathXmlApplicationContext`
+		`FileSystemXmlApplicationContext`		
 		`WebXmlApplicationContext`
 - **MainApp**:
 	+ ApplicationContext: 
 		- using `ClassPathXmlApplicationContext()`: load beans configuration file and take care of creating and initializing all objects (beans mentioned in config file)
 		- using `AnnotationConfigApplicationContext()`: load to read config file
 	+ use `getBean()` - use bean ID to return generic object, then cast to actual object.
-
+	How to use: 	`(class_name) context.getBean("bean_name");`
+			`context.getBean("bean_name", class_name.class)`
 - **Bean Configuration File**: `Beans.xml`
 ```
-<beans>
-	<bean></bean> //object
-	<bean></bean>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="" class=""></bean> //object
+	<bean id="" class=""></bean>
+
 </beans>
 ```
 - Benefits: 
@@ -35,9 +42,15 @@
 - Not directly connect to components and services but describe which services are needed by which components in config file. 
 IOC container is then responsible for hooking it all up.
 - 2 types:
-	+ `Constructor-based DI`: container invokes a class constructor with arguments, each representing a dependency on other class.
+	+ `Constructor-based DI`: container invokes a class constructor with arguments, each representing a dependency on other class, dont need setter.
+	`<contructor-arg name="" value="" type=""/>`
 	+ `Setter-based DI`: container call setter methods after invoking no-argument constructor or no-argument static factory method to instantiate bean.
-
+	`<property name="" value=""/>`
+	`<property name="" ref=""/>`
+- 3 forms:
+	+ Injection literals
+	+ Injection object
+	+ Injection collection
 
 ## 3. Bean Scope
 - Initiate bean:
@@ -60,12 +73,19 @@ IOC container is then responsible for hooking it all up.
 	+ prototype: can create new instance everytime has new request.
 
 ## 4. Autowiring
-- `@Autowired`: auto match value in container and inject
+- `@Autowired`: auto match value in container and inject without setting property value for bean.
 4 autowired mode: no, byType, byName, constructor
+or use: `<bean id="" class="" autowire="autowired_mode">`
+Ex: 	`byName` - match the **ref bean id** with the **constant name** of this class.
+	`byType` - match the **ref bean class** with **class name** 
+	`constructor` - match the **ref bean** with the **constructor** of this class.
 - Use via class filed, via a setter, via constructor(easy test)
-- In Bean configuration, use `<context:annotation-config>` to turn on annotation wiring
+- In Bean configuration, use `<context:annotation-config />` to turn on annotation wiring annotation.
+- In case the autowired cannot match all the mode, use `@Qualifier("bean_id")` to specify before the dependency(class constant).
+- No need to write setter and constructor when using `@Autowired` (and `@Qualifier`) before dependency.
 
 ## 5. Annotations
+Using `AnnotationConfigApplicationContex` t
 - `@Component`, `@Repository`(persistence layer), `@Service` (business layer), `@Controller` (presentation layer): all is a BEAN
 - `@Configuration`: use for config files.
 - `@ComponentScan`: scan bean
@@ -162,11 +182,17 @@ org.springframework.beans.factory.InitializingBean
 org.springframework.beans.factory.DisposableBean
 ```
 
-## 14. Log4J
-
+## 14. Inject from properties file 
+- In Bean configuration, add `<context:property-placeholder location="classpath:file_name.properties"/>` to define the properties file.
+- Call inside <bean>: `<property name="" value="${properties_var}" />`
+or 
+Use `@Value("value_here")` before setter methods (Add `@Required` above for mandatory constant)
+Ex: 	`@Value("Daibeodeptrai")`
+	`@Value("${cat.name}")` (which in properties file)
 
 **RERFERENCE**:
 ```
 https://www.tutorialspoint.com/spring/index.htm
 https://groupe-sii.github.io/cheat-sheets/spring/spring-core/index.html
+https://www.youtube.com/playlist?list=PL3NrzZBjk6m-nYX072dSaGfyCJ59Q5TEi
 ```

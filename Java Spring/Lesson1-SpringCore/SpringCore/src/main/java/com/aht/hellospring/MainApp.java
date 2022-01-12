@@ -16,7 +16,8 @@ public class MainApp {
 	public static void main(String[] args) {
 //		// Config using xml file
 		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-		HelloWorld object = (HelloWorld) context.getBean("helloWorld");
+//		HelloWorld object = (HelloWorld) context.getBean("helloWorld");
+		HelloWorld object = context.getBean("helloWorld", HelloWorld.class);
 		object.getAddressMap();	
 		
 		//Config using annotation
