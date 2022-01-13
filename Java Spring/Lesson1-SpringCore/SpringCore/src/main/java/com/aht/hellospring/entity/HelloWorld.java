@@ -1,6 +1,5 @@
 package com.aht.hellospring.entity;
 
-import java.util.Date;
 import java.util.Map;
 
 public class HelloWorld {

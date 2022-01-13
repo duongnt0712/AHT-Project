@@ -1,0 +1,4 @@
+1. AOP dùng để làm gì? Ứng dụng của nó khi sang MVC hay Boot?
+2. Log có tác dụng gì? Khi nào cần dùng log?
+3. Bean LifeCycle chỉ dùng khi kết nối JDBC? Trường hợp khác dùng @PostConstruct và @PreDestroy?
+Có cần thiết phải đóng IOC Container ko? Khi nào dùng close(), khi nào dùng registerShutdownHook()?
