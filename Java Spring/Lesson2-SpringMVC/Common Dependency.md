@@ -1,4 +1,11 @@
 # SPRING DEPENDENCIES
+- spring-core
+- spring-beans
+- spring-context
+- servlet-api
+- spring-webmvc
+- spring-web
+
 ```
 <dependency> 
    <groupId>org.springframework</groupId> 

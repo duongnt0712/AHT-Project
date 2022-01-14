@@ -46,3 +46,30 @@ Need 2 config file:
 	+ `@RequestMapping` with **Produces** and **Consumes**: `@RequestMapping(value = "/test", produces = {"application/json"}, consumes = "text/html")`
 	<br/> **consumes**: only accept requests which content-type similar to current value
 	<br/> **produces**: data type of the return value, (usually use for **REST-API**)
+
+## 5. Form Handling
+- Textarea:
+`<form:textarea path="address" row="5" cols="30" />`
+- Password:
+`<form:password path="password">`
+- Checkbox:
+`<form:checkbox path="receivePaper">`
+- Checkboxes:
+`<form:checkboxes items="${list}" path="receivePaper">`
+- RadioButton:
+`<form:radiobutton path="gender" value="M" label="Male">`
+- RadioButtons:
+`<form:radiobuttons path="gender" items="${numberList}">`
+- Dropdown:
+```
+<form:select path = "country">
+   <form:option value = "NONE" label = "Select"/>
+   <form:options items = "${countryList}" />
+</form:select>
+```
+- Listbox:
+`<form:select path="skills" items="${list}" multiple="true">`
+- Hidden field:
+`<form:hidden path="id" value="1">`
+- Error:
+`form:errors path="name" cssClass="error"`
