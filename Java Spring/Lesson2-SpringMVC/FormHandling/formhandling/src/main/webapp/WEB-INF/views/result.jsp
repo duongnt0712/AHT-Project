@@ -7,20 +7,14 @@
    <body>
 
       <h2>Submitted Student Information</h2>
-      <table>
-         <tr>
-            <td>Name: </td>
-            <td>${name}</td>
-         </tr>
-         <tr>
-            <td>Age: </td>
-            <td>${age}</td>
-         </tr>
-         <tr>
-            <td>ID: </td>
-            <td>${id}</td>
-         </tr>
-      </table>  
-      <a href="/formhandling/staticPage">Redirect Static Page</a>
+      <form:form method = "POST" action = "/formhandling/displayName" modelAttribute="name">
+         <table>
+            <tr>
+               <td colspan = "2">
+                  <input type = "submit" value = "Submit"/>
+               </td>
+            </tr>
+         </table>  
+      </form:form>
    </body>
 </html>

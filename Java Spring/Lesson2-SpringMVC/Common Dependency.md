@@ -2,9 +2,10 @@
 - spring-core
 - spring-beans
 - spring-context
-- servlet-api
+- spring-expression
 - spring-webmvc
 - spring-web
+- servlet-api
 
 ```
 <dependency> 

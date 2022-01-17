@@ -1,6 +1,7 @@
 package com.aht.formhandling.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,23 +13,35 @@ import com.aht.formhandling.entity.Student;
 @Controller
 public class MainController {
 	
+	private ModelAndView mnv = new ModelAndView();
+	
+	
 	@RequestMapping(value = "/")
 	public String redirect() {
 		return "redirect:student";
 	}
-	
 
 	@RequestMapping(value = "/student")
 	public ModelAndView student() {
-		return new ModelAndView("student", "student", new Student());
+		mnv.setViewName("student");
+		mnv.addObject("command", new Student());
+		return mnv;
 	}
 
 	@RequestMapping(value = "/addStudent", method = RequestMethod.POST)
-	public String addStudent(@ModelAttribute("student") Student student, ModelMap model) {
-		model.addAttribute("name", student.getName());
-		model.addAttribute("age", student.getAge());
-		model.addAttribute("id", student.getId());
+	public ModelAndView addStudent(@ModelAttribute("command") Student student) {
+		mnv.setViewName("result");
+		mnv.addObject("name", student.getName());
+		mnv.addObject("age", student.getAge());
+		mnv.addObject("id", student.getId());
 		
-		return "result";
+		return mnv;
+	}
+	
+	@RequestMapping(value = "/displayName", method = RequestMethod.POST)
+	public void displayName() {
+		mnv.setViewName("student");
+		System.out.println(mnv.getModel().entrySet());
+		System.out.println(mnv.getModel().containsKey("name"));
 	}
 }

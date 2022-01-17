@@ -6,7 +6,7 @@
    
    <body>
       <h2>Student Information</h2>
-      <form:form method = "POST" action = "/formhandling/addStudent" modelAttribute="student">
+      <form:form method = "POST" action = "/formhandling/addStudent" modelAttribute="command">
          <table>
             <tr>
                <td><form:label path = "name">Name</form:label></td>

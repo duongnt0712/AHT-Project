@@ -1,6 +1,6 @@
 # SPRING MVC
 
-##Prerequisites
+### Prerequisites
 - Spring Core
 - JDBC
 - Servlet
