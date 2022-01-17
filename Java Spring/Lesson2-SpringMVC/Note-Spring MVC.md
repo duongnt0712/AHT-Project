@@ -73,3 +73,5 @@ Need 2 config file:
 `<form:hidden path="id" value="1">`
 - Error:
 `form:errors path="name" cssClass="error"`
+
+## 6. File handling
