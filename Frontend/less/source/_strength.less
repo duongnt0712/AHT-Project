@@ -1,0 +1,31 @@
+.strength{
+    width: 100%;
+    border-bottom: 1px solid @gray;
+    border-top: 1px solid @gray;
+    .col{
+        .cols(33.33%);
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 0.5px solid @gray;
+        border-right: 0.5px solid @gray;
+        text-align: center;
+        p:first-child{
+            font-size: 18px;
+            letter-spacing: 2px;
+            line-height: 28px;
+            color: @light-dark;
+            font-weight: 700;
+            font-family: @comorant;
+            text-transform: uppercase;
+        }
+        p:last-child{
+            font-size: 14px;
+            line-height: 0px;
+            color: @gray;
+            font-weight: 400;
+            font-family: @fira-sans;
+        }
+    }
+}

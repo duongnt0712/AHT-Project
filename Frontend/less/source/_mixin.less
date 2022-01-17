@@ -1,0 +1,46 @@
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex(@vertical,@horizontal) {
+    display: flex;
+    justify-content: @horizontal;
+    align-items: @vertical;
+}
+
+.white{
+    color: #fff;
+}
+
+.price-color{
+    color: @price-color;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;    
+}
+
+.container-fluid{
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.row{
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.cols(@number) {
+    width: @number;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
