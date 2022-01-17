@@ -6,7 +6,10 @@
 
 - **IOC Container**: manage beans - create object, write them together, config and manage their life cycle till destruction.
 		configuration metadata: XML, Java annotations, Java code.
-	+ ```diff - **BeanFactory**``` (use for lightweight application): provide config framework and basic function
+	+ ```diff 
+	- **BeanFactory**
+	``` 
+	(use for lightweight application): provide config framework and basic function
 	<br/>Ex: `XmlBeanFactory`
 	+ **ApplicationContext** (recommend): extends from BeanFactory with more enterprise-specific functionality: resolve textual messages from a properties file, publish application events to interested event listeners.
 	<br/>Common implementation: 
