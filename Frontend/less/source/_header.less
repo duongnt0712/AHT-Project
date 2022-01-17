@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Frontend/less/source/_header.less
 .header{
     width: 100%;
     height: 1000px;
@@ -5,76 +6,168 @@
     background-size: cover;
     padding: 20px 100px 0 100px;
     position: relative;
+=======
+.header {
+  width: 100%;
+  height: 1000px;
+  background-image: url("../less/img/bg-small.png");
+  background-size: cover;
+  padding-top: 20px;
+  position: relative;
+>>>>>>> 56483ad8c253064b2bbf59e2e8c39534630b221f:work/less/source/_header.less
 }
 
-.banner-text{
-    .flex-row;
-    width: 100%;
-    padding: 0 100px 0 360px;
-    justify-content: space-between;
-    margin: auto;
-    position: absolute;
-    top: calc(50% - 150px);
-    ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        a{
-            text-decoration: none;
-            font-size: 24px;
-            letter-spacing: 2px;
-            line-height: 40px;
-            color: #ffffff;
-            font-weight: 500;
-            font-family: @comorant;
-        }
+.banner-text {
+  .flex-row;
+  width: 100%;
+  padding: 0 100px 0 360px;
+  justify-content: space-between;
+  margin: auto;
+  position: absolute;
+  top: calc(50% - 150px);
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    a {
+      text-decoration: none;
+      font-size: 24px;
+      letter-spacing: 2px;
+      line-height: 40px;
+      color: #ffffff;
+      font-weight: 500;
+      font-family: @comorant;
     }
-    .banner-left{
-        padding: 0 15px;
-        width: 870px;
-        font-family: @comorant;
-        .title{
-            font-size: 100px;
-            letter-spacing: 30px;
-            line-height: 100px;
-            color: @light-dark;
-            font-weight: 600;
-            font-style: italic;
-            text-transform: uppercase;
-            margin-top: 38px;
-        }
-        p:first-child{
-            font-size: 24px;
-            letter-spacing: 13px;
-            line-height: 17px;
-            color: #696969;
-            font-weight: 400;
-            font-family: @fira-sans;
-        }
-        button{
-            background-color: black;
-            width: 197px;
-            height: 47px;
-            font-size: 16px;
-            letter-spacing: 2px;
-            line-height: 24px;
-            color: #ffffff;
-            font-weight: 400;
-            font-family: @fira-sans;
-            text-transform: uppercase;
-            margin-top: 55px;
-        }
+  }
+
+  .banner-left {
+    padding: 0 15px;
+    width: 870px;
+    font-family: @comorant;
+    .title {
+      font-size: 100px;
+      letter-spacing: 30px;
+      line-height: 100px;
+      color: @light-dark;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: uppercase;
+      margin-top: 38px;
     }
-    .banner-right{
-        text-align: right;
-        .social-link{
-            margin-bottom: 45px;
-        }
-        .social-link a:hover{
-            color: @light-dark
-        }
+    p:first-child {
+      font-size: 24px;
+      letter-spacing: 13px;
+      line-height: 17px;
+      color: #696969;
+      font-weight: 400;
+      font-family: @fira-sans;
     }
+    div {
+      margin-top: 68px;
+    }
+    a {
+      background-color: black;
+      padding: 14px 31px;
+      font-size: 16px;
+      letter-spacing: 2px;
+      line-height: 24px;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: @fira-sans;
+      text-transform: uppercase;
+    }
+    a:hover {
+      background-color: @light-dark;
+    }
+  }
+  .banner-right {
+    text-align: right;
+    .social-link {
+      margin-bottom: 45px;
+    }
+    .social-link a:hover {
+      color: @light-dark;
+    }
+  }
 }
+
+.nav {
+  .flex-row;
+  height: 70px;
+  justify-content: space-between;
+  padding: 0 100px;
+  position: relative;
+  .btn {
+    .flex-row;
+    justify-content: space-between;
+    width: 5.5%;
+    margin-right: 10px;
+    a {
+      color: white;
+    }
+    ion-icon {
+      width: 25px;
+      height: 25px;
+    }
+    &-cart {
+      position: relative;
+      &-overlay {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-image: url("../less/img/overlay-cart.png");
+        top: -5px;
+        right: -9px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 21px;
+        color: @light-dark;
+        font-family: @fira-sans;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.menu {
+  width: 0;
+  height: 0;
+  position: fixed;
+  right: 0%;
+  z-index: 2;
+  top: 70px;
+  transition: width 1s, height 1s;
+  text-indent: 100%;
+  display: none;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      flex-direction: column;
+      background-color: blanchedalmond;
+      .col {
+        .cols(100%);
+        height: 50px;
+        display: block;
+        border: none;
+        border-bottom: 0.5px solid white;
+        &-inner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          a {
+            color: #000;
+            font-family: @comorant;
+            font-weight: 700;
+            
+          }
+        }
+      }
+    }
+  }
+}
+<<<<<<< HEAD:Frontend/less/source/_header.less
 
 .nav{
     .flex-row;
@@ -111,3 +204,5 @@
         }
     }
 }
+=======
+>>>>>>> 56483ad8c253064b2bbf59e2e8c39534630b221f:work/less/source/_header.less
