@@ -66,7 +66,7 @@ public class FileUploadController {
     	String appPath = context.getRealPath("");
     	System.out.println("appPath = " + appPath);
     	
-    	// construct the complete absolute path of 
+    	// construct the complete absolute path of the application
     	String fullPath = appPath + filePath;
     	File downloadFile = new File(fullPath);
     	FileInputStream inputStream = new FileInputStream(downloadFile);

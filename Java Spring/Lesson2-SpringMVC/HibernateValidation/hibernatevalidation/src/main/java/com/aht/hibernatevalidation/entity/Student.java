@@ -1,12 +1,16 @@
 package com.aht.hibernatevalidation.entity;
 
+import org.hibernate.validator.constraints.Range;
+import jakarta.validation.constraints.NotEmpty;
+
 public class Student {
-	
 	
 	private Integer id;
 	
+	@Range(min=1, max=100)
 	private Integer age;
 	
+	@NotEmpty
 	private String name;
 
 	public Integer getId() {

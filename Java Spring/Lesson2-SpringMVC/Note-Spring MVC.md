@@ -75,3 +75,36 @@ Need 2 config file:
 `form:errors path="name" cssClass="error"`
 
 ## 6. File handling
+### Upload File
+Using `CommonsMultipartFile` or `MultipartFile` to handle upload file.
+| CommonsMultipartFile | MultipartFile |
+| -------------------- | ------------- |
+| Implementation of MultipartFile | Interface |
+| Must add @RequestParam | Can directly use |
+
+**Common methods**
+- `getOriginalFilename()`: Return the original filename in the client's filesystem, may contain file path
+- `getContentType()`: Return mime type of the file
+- `transferTo()`: Transfer the received file to the given destination file.
+
+### Download File
+Using `ServletContext` to work with request <br/>
+```
+ServletContext context = request.getServletContext();
+```
+**Common Methods**
+- `getMimeType("file_fullpath")`: to get mime type of the file
+- `getRealPath()`: get full path to the current project
+
+**Steps**:
+- read file content from fileinputstream
+- create complete absolute path of the application
+- get MIME type of the file
+- set content attribute for response: `setContentType()`, `setContentLenght()`
+- set headers for response: 
+	+ `headerKey = "Content-Disposition"`, 
+	+ `headerValue="attachment; filename="download_filename""`
+	+ `setHeader(headerKey, headerValue)`
+- get output stream of response
+- write bytes read from input stream into fileoutputstream
+
