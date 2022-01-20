@@ -48,6 +48,7 @@ Need 2 config file:
 	<br/> **produces**: data type of the return value, (usually use for **REST-API**)
 
 ## 5. Form Handling
+### Basic form attributes
 - Textarea:
 `<form:textarea path="address" row="5" cols="30" />`
 - Password:
@@ -72,7 +73,15 @@ Need 2 config file:
 - Hidden field:
 `<form:hidden path="id" value="1">`
 - Error:
-`form:errors path="name" cssClass="error"`
+`<form:errors path="name" cssClass="error">`
+### Handle form submission 
+- `@ModelAttribute` to bind form field in form of object
+- `BindingResult` interface to validate form fields
+```
+if (bindingResult.hasErrors()) {
+	// form validation error
+}
+```
 
 ## 6. File handling
 ### Upload File
