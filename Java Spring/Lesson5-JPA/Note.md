@@ -4,7 +4,7 @@
 Config through `persistence.xml`:
 | Order |
 | ----- |
-| Persistence |
-| EntityManagerFactory |
-| EntityManager |
-| Query	| EntityManager |
+| `Persistence` |
+| `EntityManagerFactory`: create `EmtityManager` |
+| `EntityManager`:  manage persistence operations (crud) and query entity |
+| `Query` | `EntityManager`: manage transaction |
