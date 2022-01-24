@@ -15,7 +15,7 @@
 - `ResponseEntity`: similar to @ResponseBody but with more info: status code, headers, body
 - `@PathVariable`: get value in URL
 - `MediaType`: parameters' filter, return data that have the same type as MediaType.
-
+- `@ControllerAdvice`: handle exception
  
 
 
