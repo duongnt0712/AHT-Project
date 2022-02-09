@@ -1,0 +1,10 @@
+CREATE TABLE employee ();
+ALTER TABLE employee ADD id INT;
+ALTER TABLE employee ADD name VARCHAR;
+ALTER TABLE employee ADD age INT;
+ALTER TABLE employee ADD type VARCHAR;
+insert into employee VALUES (1,"Bui Tan Truong", 25, "Full-time");
+insert into employee VALUES (2,"Quach Van Thanh", 27, "Part-time");
+insert into employee VALUES (3,"Dang Minh Nhat Quang", 30, "Part-time");
+insert into employee VALUES (4,"Le Thi Lung Linh", 26, "Full-time");
+
