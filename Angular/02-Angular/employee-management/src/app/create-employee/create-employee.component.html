@@ -1,0 +1,59 @@
+<div class="container p-30">
+    <div class="row">
+        <div class="col-md-12 main-datatable">
+            <div class="card_body">
+                <div class="row d-flex">
+                    <div class="col-sm-4 createSegment"> 
+                        <a href="">Back</a>
+                    </div>
+                    <div class="col-sm-8 add_flex">
+                        <h1>Create New Employee</h1>
+                    </div> 
+                    
+                </div>
+                <div class="overflow-x">
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="employee.name" placeholder="Enter email">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date Of Birth</label>
+                            <input type="date" class="form-control" id="dob" required [ngModel]="employee.dob | date:'yyyy-MM-dd'" name="dob">
+                        </div>
+                        <div class="form-group">
+                            <label for="sex">Sex</label><br/>
+                            <select class="custom-select" required [(ngModel)]="employee.sex" name="sex" id="sex">
+                                <option selected>Choose...</option>
+                                <option [ngValue]="0">Male</option>
+                                <option [ngValue]="1">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="numberInsurance">Number Insurance</label>
+                            <input type="text" class="form-control" id="numberInsurance" required [(ngModel)]="employee.numberInsurance" placeholder="Number Insurance" name="numberInsurance">
+                        </div>  
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" required [(ngModel)]="employee.address" placeholder="Address" name="address">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" id="phone" required [(ngModel)]="employee.phone" placeholder="Phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type</label><br/>
+                            <select class="custom-select" required [(ngModel)]="employee.type" name="type" id="type">
+                                <option selected>Choose...</option>
+                                <option [ngValue]="1">1</option>
+                                <option [ngValue]="2">2</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

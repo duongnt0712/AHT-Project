@@ -1,0 +1,113 @@
+<div class="container p-30">
+    <div class="row">
+        <div class="col-md-12 main-datatable">
+            <div class="card_body">
+                <div class="row d-flex">
+                    <div class="col-sm-4 createSegment"> 
+                        <a (click)="createEmployee()" class="btn dim_button create_new"> <span class="glyphicon glyphicon-plus"></span> Create New</a>
+                    </div>
+                    <div class="col-sm-8 add_flex">
+                        <div class="form-group searchInput">
+                            <label for="email">Search:</label>
+                            <input type="search" class="form-control" id="filterbox" placeholder=" ">
+                        </div>
+                    </div> 
+                </div>
+                <div class="overflow-x">
+                    <table style="width:100%;" id="filtertable" class="table cust-datatable dataTable no-footer">
+                        <thead>
+                            <tr>
+                                <th style="min-width:50px;">ID</th>
+                                <th style="min-width:50px;">Name</th>
+                                <th style="min-width:50px;">DOB</th>
+                                <th style="min-width:50px;">Sex</th>
+                                <th style="min-width:50px;">Number Insurance</th>
+                                <th style="min-width:50px;">Address</th>
+                                <th style="min-width:50px;">Phone</th>
+                                <th style="min-width:50px;">Type</th>
+                                <th style="min-width:50px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let employee of employees | async; let i = index; paginate: { itemsPerPage: 5, currentPage: currentPage, totalItems: total }" [attr.data-index]="i">
+                                <td>{{i+1}}</td>
+                                <td>{{employee.name}}</td>
+                                <td>{{employee.dob | ddMmYYYYDate}}</td>
+                                <td><span class="mode {{employee.sex == 0 ? 'mode_process' : 'mode_on'}}">{{employee.sex == 0 ? "Male" : "Female"}}</span></td>
+                                <!-- <td><span [ngIf]="employee.sex = 0;else female" class="mode mode_process">Male</span>
+                                    <ng-template #female>
+                                        <span class="mode mode_process">Male</span>
+                                    </ng-template> -->
+                                <!-- <ng-template [ngIf]="employee.sex == 1"><span class="mode mode_on">Female</span></ng-template></td> -->
+                                <td>{{employee.numberInsurance}}</td>
+                                <td>{{employee.address}}</td>
+                                <td>{{employee.phone}}</td>
+                                <td>{{employee.type}}</td>
+                                <td class="btn-spanning">
+                                    <div class="btn-group" >
+                                        <a (click)="employeeDetails(employee.id)" class="dropdown_icon">
+                                        <i class="fa fa-ellipsis-h"></i> </a>                                        
+                                    </div>
+                                    <div class="btn-group" >
+                                        <a (click)="updateEmployee(employee.id)" class="dropdown_icon"><i class="fa fa-pencil-square-o"></i></a>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a (click)="deleteEmployee(employee.id)" class="dropdown_icon">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+                <!-- <div class="table-pagination">
+                    <div class="dataTables_paginate paging_simple_numbers" id="filtertable_paginate">
+                        <a class="paginate_button prev" >Previous</a>
+                        <span class="paginate_button">Previous</span>
+                        
+                        <span>
+                            <a class="paginate_button" >{{total}}</a>
+                            <span class="paginate_button current">[[${i}]]</span >
+                        </span>
+                            
+                        <a class="paginate_button next">Next</a>
+                        <span class="paginate_button">Next</span >
+                    </div>
+                </div>             -->
+            </div>
+        </div>
+    </div>
+</div>
+ <script>
+    $(document).ready(function() {
+    var dataTable = $('#filtertable').DataTable({
+        "pageLength":5,
+        'aoColumnDefs':[{
+            'bSortable':false,
+            'aTargets':['nosort'],
+        }],
+        columnDefs:[
+            {type:'date-dd-mm-yyyy',aTargets:[5]}
+        ],
+        "aoColumns":[
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "order":false,
+        "bLengthChange":false,
+        "dom":'<"top">ct<"top"p><"clear">'
+    });
+    $("#filterbox").keyup(function(){
+        dataTable.search(this.value).draw();
+    });
+} );
+</script>
+
+
